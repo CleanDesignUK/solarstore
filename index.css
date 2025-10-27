@@ -1,0 +1,368 @@
+/* Screen-reader only utility */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Glassy hero form to match cards */
+.hero-form{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: .6rem;
+  width: min(760px, 100%);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-stroke);
+  border-radius: 14px;
+  padding: .8rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+}
+.hero-form input[type="email"],
+.hero-form select{
+  appearance:none;
+  -webkit-appearance:none;
+  font: inherit;
+  padding: .85rem .9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+}
+.hero-form button.btn{
+  padding: .9rem 1.2rem;
+  border-radius: 12px;
+}
+
+/* Stack nicely on mobile */
+@media (max-width: 720px){
+  .hero-form{ grid-template-columns: 1fr; }
+}
+
+/* Pill container */
+.trust-pill{
+  display:flex;
+  flex-direction:column;           /* stack logo above content */
+  align-items:center;              /* center everything */
+  gap:.55rem;
+  padding:1rem 1.1rem;
+  min-width:260px;
+}
+
+/* Top Trustpilot block */
+.trustpilot-top{
+  display:flex;
+  flex-direction:column;           /* logo above "Rated Excellent" */
+  align-items:center;
+  gap:.3rem;
+  text-decoration:none;
+}
+.trustpilot-top:hover{ opacity:.9; }
+
+.tp-logo{ height:50px; display:block; }
+
+/* "Rated Excellent" chip (no numbers) */
+.tp-excellent{
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  font-weight:700;
+  color:#00B67A;                   /* Trustpilot green */
+  background:#E9F7F1;              /* soft green chip bg */
+  border:1px solid rgba(0,0,0,.06);
+  padding:.2rem .55rem;
+  border-radius:999px;
+  font-size:.8rem;
+  line-height:1;
+}
+
+/* Bottom row with avatars + copy */
+.trust-content{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  text-align:center;
+}
+.trust-content .pill-text{ white-space:nowrap; font-size:.95rem; }
+.trust-content .avatars img{ width:34px; height:34px; border-radius:50%; object-fit:cover; border:2px solid #fff; margin-left:-6px; }
+.trust-content .avatars img:first-child{ margin-left:0; }
+
+/* Make sure previous left-alignment rules don’t override this */
+.talk-pill{ justify-content:flex-start; }   /* keep existing look but center via .trust-pill */
+
+
+/* =============== SERVICES =============== */
+.services-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  max-width: 780px;
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.services-grid .service-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 26px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: 0.2s;
+  display: block;
+  height: 100%;
+}
+
+.services-grid .service-card:hover {
+  box-shadow: 0 6px 26px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+
+.services-grid .service-card.core {
+  border-top: 6px solid #feda3e;
+}
+
+.service-card .icon {
+  width: 64px;
+  height: 64px;
+  background: #f4f4f4;
+  color: #53c704;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+
+/* SECTION LIGHTNING SEPARATOR */
+.section-separator {
+  text-align: center;
+  margin: 60px auto 0;
+}
+.section-separator i {
+  font-size: 46px;
+  color: var(--yellow);
+}
+
+/* ABOUT SECTION */
+.about-section {
+  background: #fff8d6; /* Soft yellow (brand tone) */
+  padding: 120px 0;
+}
+.about-wrapper {
+  max-width: 1200px;
+}
+
+/* About Text Styling */
+.about-label {
+  display: inline-block;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+.about-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.about-text {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.75;
+}
+
+/* Image */
+.about-img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+}
+
+/* Button */
+.btn-about {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--yellow);
+  color: #111;
+  padding: 12px 28px;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.btn-about:hover {
+  filter: brightness(0.95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  .section-separator {
+    margin-top: 30px;
+  }
+}
+
+
+/* Lightning divider between sections */
+.lightning-divider {
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 5;
+}
+
+.lightning-divider i {
+  font-size: 90px;            /* bigger icon */
+  color: var(--yellow);       /* your brand yellow */
+  display: inline-block;
+  line-height: 1;
+}
+
+
+/* ===== Gallery section ===== */
+.gallery-section{
+  padding: clamp(48px, 6vw, 84px) 0;
+  background: #fff;
+}
+
+.gallery-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(20px, 3vw, 28px);
+  padding-top: 50px;
+}
+
+.gallery-title{
+  font-family: "Quicksand", ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.eyebrow{
+  margin: 0 0 .35rem 0;
+  font-size: .95rem;
+  letter-spacing: .02em;
+  color: rgba(0,0,0,.55);
+}
+
+.btn-gallery{
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  color: #111;
+  background: var(--yellow, #feda3e);
+  border: 1px solid rgba(0,0,0,.08);
+  padding: .75rem 1.05rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.10);
+  text-decoration: none;
+  transition: filter .18s ease, transform .06s ease, box-shadow .18s ease;
+}
+.btn-gallery:hover{ filter: brightness(.98); box-shadow: 0 8px 22px rgba(0,0,0,.12); }
+.btn-gallery:active{ transform: translateY(1px); }
+
+/* ===== Mosaic Grid (5 images) ===== */
+/* ===== Flexible Mosaic Grid ===== */
+.gallery-grid{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Layout placement only - no fixed row height */
+.tile-a{ grid-column: span 7; }
+.tile-b{ grid-column: span 5; }
+.tile-c{ grid-column: span 5; }
+.tile-d{ grid-column: span 4; }
+.tile-e{ grid-column: span 8; }
+
+/* Tile styles */
+.tile{
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.tile img{
+  width: 100%;
+  height: auto; /* ✅ FLEXIBLE! */
+  display: block;
+}
+
+/* Hover style */
+.tile:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(0,0,0,.12);
+}
+
+/* ✅ Responsive layout */
+@media (max-width: 991px){
+  .gallery-grid{ grid-template-columns: repeat(6, 1fr); }
+  .tile-a{ grid-column: span 6; }
+  .tile-b{ grid-column: span 3; }
+  .tile-c{ grid-column: span 3; }
+  .tile-d{ grid-column: span 3; }
+  .tile-e{ grid-column: span 3; }
+}
+
+@media (max-width: 576px){
+  .gallery-grid{ grid-template-columns: 1fr; }
+  .tile-a, .tile-b, .tile-c, .tile-d, .tile-e{
+    grid-column: span 1;
+  }
+}
+
+/* Space below gallery so the bolt has room to overlap */
+.gallery-section { padding-bottom: 90px; }
+
+/* Global between-sections lightning */
+.lightning-between{
+  position: relative;
+  height: 0;                  /* no extra layout height */
+  z-index: 5;                 /* on top of both sections */
+}
+.lightning-between i{
+  position: absolute;
+  left: 50%;
+  top: 0;                     /* sits on the boundary */
+  transform: translate(-50%, -50%);  /* half above, half below */
+  font-size: 96px;            /* bigger icon */
+  line-height: 1;
+  color: var(--yellow, #feda3e);
+  pointer-events: none;
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,.12));
+}
+
+/* Optional: if the bolt looks too low/high, tweak only this: */
+/* .lightning-between i { transform: translate(-50%, -54%); } */
