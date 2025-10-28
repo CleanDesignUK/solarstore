@@ -7,6 +7,7 @@
 <title>Solar Panels & Battery Storage in North Wales & UK Wide | Solar Store</title>
 <meta name="description" content="MCS-accredited solar panel installers in North Wales & UK wide. We design, supply and install solar panels for homes & businesses, plus solar battery storage and EV charging. Serving Wales & England, UK-wide. Get a fast, competitive quote from Solar Store, Menai Bridge." />
 <link rel="canonical" href="https://solarstore.biz/" />
+<meta name="keywords" content="solar panels, install solar panels, solar panels for home, solar battery storage, solar panel installers near me, North Wales, Wales, England, UK" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -22,8 +23,13 @@
 <meta name="twitter:description" content="MCS-accredited solar panel installers for homes & businesses. North Wales • Wales & England • UK-wide." />
 <meta name="twitter:image" content="https://solarstore.biz/og-hero.jpg" />
 
-<!-- Optional (legacy) keywords -->
-<meta name="keywords" content="solar panels, install solar panels, solar panels for home, solar battery storage, solar panel installers near me, North Wales, Wales, England, UK" />
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/jpeg" sizes="32x32" href="/solar-store-UK-logo-small.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#feda3e">
+
+
 <!-- Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap Icons -->
@@ -72,65 +78,55 @@
 
 </head>
 <body>
+
+    <!-- NAVBAR -->
 <header class="site-header">
   <div class="container header-row">
     <!-- Brand -->
-    <a class="brand" href="#">
+    <a class="brand" href="/">
       <img src="solar-store-UK-logo-medium.jpg" alt="Solar Store" class="logo">
       <span class="brand-name">Solar Store</span>
     </a>
 
-<button class="hamburger" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+    <!-- Burger -->
+    <button class="hamburger" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-
-    <!-- Desktop nav -->
-    <nav id="primary-nav" class="nav">
-      <!-- Mobile CTA (hidden on desktop) -->
-      <a class="action-pill mobile-cta" href="#enquiry">
-        <span>Enquire Now</span>
-        <span class="dot">
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-        </span>
-      </a>
-
+    <!-- Nav + the ONLY CTA -->
+    <nav id="primary-nav" class="nav" aria-label="Primary">
       <ul class="menu">
-        <li><a class="is-current" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a class="is-current" href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
 
         <li class="has-sub">
-          <!-- Use a button for mobile expand while keeping link feel -->
-          <a href="#" class="sub-toggle">
+          <a href="/services" class="sub-toggle">
             Services
-            <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </a>
           <ul class="submenu" aria-label="Services submenu">
-            <li><a href="#">Solar PV – Domestic</a></li>
-            <li><a href="#">Solar PV – Commercial</a></li>
-            <li><a href="#">Battery Storage</a></li>
-            <li><a href="#">EV Charging</a></li>
+            <li><a href="/services/solar-domestic">Solar Panels for Homes</a></li>
+            <li><a href="/services/solar-commercial">Commercial Solar Systems</a></li>
+            <li><a href="/services/battery-storage">Battery Storage & Add-Ons</a></li>
+            <li><a href="/services/ev-charging">EV Charging</a></li>
+            <li><a href="/services/maintenance">Off-Grid Solar Systems</a></li>
           </ul>
         </li>
 
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Blogs</a></li>
+        <li><a href="/gallery">Project Gallery</a></li>
       </ul>
+
+      <!-- The single CTA -->
+      <a class="cta nav-cta" href="#enquiry" aria-label="Enquire Now">
+        <span>Enquire Now</span>
+        <span class="cta__dot">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="#fff" stroke-width="2"/></svg>
+        </span>
+      </a>
     </nav>
-
-<!-- Desktop CTA -->
-<a class="cta desktop-cta" href="#enquiry" aria-label="Enquire Now">
-  <span>Enquire Now</span>
-  <span class="cta__dot">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-  </span>
-</a>
-
-
   </div>
 </header>
+
 
 
   <!-- HERO -->
@@ -154,53 +150,29 @@
 
 <!-- HERO FORM -->
 <form id="enquiry" class="hero-form" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+  <input type="hidden" name="access_key" value="ae44b6d0-9991-4f69-974e-802f107a5cf3" />
   <input type="hidden" name="subject" value="New Website Enquiry" />
   <input type="hidden" name="from_name" value="Solar Store Website" />
 
-  <input type="email" name="email" placeholder="Your email*" required />
+  <input type="email" id="email" name="email" placeholder="Your email*" required />
 
   <select name="service" required>
     <option value="" disabled selected>Select a service*</option>
-    <option>Solar Panels – Home</option>
-    <option>Solar Panels – Commercial</option>
-    <option>Battery Storage</option>
-    <option>Solar + Battery Package</option>
+    <option>Solar Panels - Homes</option>
+    <option>Commercial Solar Systems</option>
+    <option>Battery & Add-Ons</option>
     <option>EV Charging</option>
-    <option>Maintenance & Monitoring</option>
+    <option>Off-Grid Solar Systems</option>
   </select>
 
-  <button type="submit" class="btn-submit">Get Quote</button>
+<button type="submit" class="cta cta--lg hero-quote">
+  <span>Get Quote</span>
+</button>
+
 </form>
       </div>
 
-      <!-- TRUST PILL WITH AVATARS -->
-<div class="talk-pill trust-pill">
-  <!-- Trustpilot badge (TOP + CENTERED) -->
-  <a href="https://uk.trustpilot.com/review/solarstore.biz"
-     target="_blank" rel="noopener"
-     class="trustpilot-top" aria-label="See our Trustpilot reviews">
-    <img class="tp-logo"
-         src="Trustpilot-logo-removebg-preview.png"
-         alt="Trustpilot" />
-    <span class="tp-excellent">
-      <!-- green star icon -->
-      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="#00B67A" d="M12 2l2.9 6.8 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.8 21l1.7-7L2 9.4l7.1-.6z"/>
-      </svg>
-      Rated Excellent
-    </span>
-  </a>
 
-  <!-- Avatars + trust copy (BOTTOM ROW) -->
-  <div class="trust-content">
-    <div class="avatars" aria-hidden="true">
-      <img src="client-testimonial.jpg" alt="homeowner">
-      <img src="client-testimonial-2.jpg" alt="business owner">
-    </div>
-    <span class="pill-text">Trusted by <strong>50+ homes &amp; businesses</strong></span>
-  </div>
-</div>
 </section>
 
 <!-- =======================
@@ -220,7 +192,7 @@
         solar maintenance</strong> for homes and businesses.
     </p>
 
-    <div class="row g-4 services-grid">
+    <div class="row g-4 services-grid desktop-services">
       <!-- Domestic Solar Panels -->
       <div class="col-md-6">
         <a href="#" class="service-card core">
@@ -243,8 +215,8 @@
       <div class="col-md-4">
         <a href="#" class="service-card">
           <div class="icon"><i class="bi bi-battery-charging"></i></div>
-          <h3>Solar Battery Storage</h3>
-          <p>Store unused solar energy and use it at night or during power cuts.</p>
+          <h3>Solar Battery Storage & Add-Ons</h3>
+          <p>Store unused solar energy or add a battery to your existing solar and use it at night or during power cuts.</p>
         </a>
       </div>
 
@@ -257,14 +229,14 @@
         </a>
       </div>
 
-      <!-- Maintenance -->
+      <!-- Maintenance 
       <div class="col-md-4">
         <a href="#" class="service-card">
           <div class="icon"><i class="bi bi-gear"></i></div>
           <h3>Solar Maintenance</h3>
           <p>System health checks, performance optimisation and expert solar diagnostics.</p>
         </a>
-      </div>
+      </div>-->
 
       <!-- Off-Grid -->
       <div class="col-md-4">
@@ -275,26 +247,104 @@
         </a>
       </div>
 
-      <!-- Solar Upgrades -->
+
+      <!-- Solar Upgrades
       <div class="col-md-4">
         <a href="#" class="service-card">
           <div class="icon"><i class="bi bi-arrow-repeat"></i></div>
           <h3>System Upgrades</h3>
           <p>Add panels, upgrade inverters or install batteries to existing solar systems.</p>
         </a>
-      </div>
+      </div> -->
 
-      <!-- Solar Repairs -->
+      <!-- Solar Repairs
       <div class="col-md-4">
         <a href="#" class="service-card">
           <div class="icon"><i class="bi bi-tools"></i></div>
           <h3>Solar Repairs</h3>
           <p>Expert troubleshooting and repair service for damaged or underperforming systems.</p>
         </a>
-      </div>
+      </div> -->
 
     </div>
+    
+
   </div>
+  <!-- Mobile-only Swiper -->
+<div class="swiper services-swiper mobile-services">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <a href="#" class="service-card core">
+        <div class="icon"><i class="bi bi-house-gear"></i></div>
+        <h3>Solar Panels for Homes</h3>
+        <p>Reduce energy bills and gain energy independence with MCS-certified domestic solar panel systems.</p>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a href="#" class="service-card core">
+        <div class="icon"><i class="bi bi-building-check"></i></div>
+        <h3>Commercial Solar Systems</h3>
+        <p>High-efficiency solar for warehouses, agriculture, schools and offices with long-term ROI.</p>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a href="#" class="service-card">
+        <div class="icon"><i class="bi bi-battery-charging"></i></div>
+        <h3>Solar Battery Storage & Add-Ons</h3>
+        <p>Store unused solar energy or add a battery to your existing solar and use it at night or during power cuts.</p>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a href="#" class="service-card">
+        <div class="icon"><i class="bi bi-lightning-charge"></i></div>
+        <h3>EV Charger Installation</h3>
+        <p>Home & commercial EV charging solutions compatible with all major vehicle brands.</p>
+      </a>
+    </div>
+
+    <!-- Off-Grid 
+    <div class="swiper-slide">
+      <a href="#" class="service-card">
+        <div class="icon"><i class="bi bi-gear"></i></div>
+        <h3>Solar Maintenance</h3>
+        <p>System health checks, performance optimisation and expert solar diagnostics.</p>
+      </a>
+    </div>-->
+
+    <div class="swiper-slide">
+      <a href="#" class="service-card">
+        <div class="icon"><i class="bi bi-globe-americas"></i></div>
+        <h3>Off-Grid Solar Systems</h3>
+        <p>Power remote cabins, farms and rural homes with full off-grid solar energy.</p>
+      </a>
+    </div>
+
+
+    <!-- Off-Grid 
+    <div class="swiper-slide">
+      <a href="#" class="service-card">
+        <div class="icon"><i class="bi bi-arrow-repeat"></i></div>
+        <h3>System Upgrades</h3>
+        <p>Add panels, upgrade inverters or install batteries to existing solar systems.</p>
+      </a>
+    </div>-->
+
+    <!-- Off-Grid 
+    <div class="swiper-slide">
+      <a href="#" class="service-card">
+        <div class="icon"><i class="bi bi-tools"></i></div>
+        <h3>Solar Repairs</h3>
+        <p>Expert troubleshooting and repair service for damaged or underperforming systems.</p>
+      </a>
+    </div>-->
+  </div>
+
+  <!-- Optional dots like testimonial nav (hide on desktop anyway) -->
+  <div class="services-pagination"></div>
+</div>
 </section>
 
 <!-- SECTION SEPARATOR (LIGHTNING ICON) -->
@@ -351,10 +401,12 @@
         <p class="eyebrow">Projects & Gallery</p>
         <h2 class="gallery-title">See Our Solar & Battery Installs</h2>
       </div>
-      <a class="btn btn--primary" href="/gallery">Explore Gallery →</a>
+      <a class="btn btn--primary" href="/gallery">Explore Gallery</a>
     </div>
 
-    <div class="masonry-gallery">
+    <div class="gallery-wrapper">
+
+    <div class="masonry-gallery desktop-gallery">
       <div class="gallery-item"><img src="solar-panel-installation-solar-store-uk-commercial.jpg" alt=""></div>
       <div class="gallery-item"><img src="solar-store-panel-batteries-installation-menai-bridge-wales-uk-6.jpg" alt=""></div>
       <div class="gallery-item"><img src="sunsynk-solar-panel-installer-menai-bridge-bangor-uk.jpg" alt=""></div>
@@ -363,6 +415,17 @@
       <div class="gallery-item tall"><img src="solar-panel-installation-solar-store-uk-home-2.jpg" alt=""></div>
       <div class="gallery-item tall"><img src="solar-panel-installation-solar-store-uk-home-3.jpg" alt=""></div>
 
+    </div>
+
+    <!-- Mobile carousel -->
+  <div class="swiper gallery-swiper mobile-gallery">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="solar-store-panel-batteries-installation-menai-bridge-wales-uk-6.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="sunsynk-solar-panel-installer-menai-bridge-bangor-uk.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="solar-store-panel-batteries-installation-menai-bridge-wales-uk-4.jpg" alt=""></div>
+
+    </div>
+  </div>
     </div>
   </div>
 </section>
@@ -605,8 +668,9 @@
 ======================== -->
 <section id="certifications" class="cert-section">
   <div class="container">
-    <!-- SEO headline + description -->
     <div class="row g-4 align-items-center cert-hero">
+
+      <!-- LEFT: copy/text/logos -->
       <div class="col-lg-8">
         <span class="eyebrow">*Accreditations & Quality Assurance</span>
         <h2 class="cert-title">
@@ -619,64 +683,193 @@
           North Wales, Wales & England.
         </p>
 
-        <!-- Key statements -->
         <ul class="cert-bullets">
-          <li><i class="bi bi-patch-check-fill"></i> All domestic installations are<strong>MCS accredited.</strong></li>
-          <li><i class="bi bi-patch-check-fill"></i> All commercial installations are<strong>MCS accredited.</strong></li>
+          <li><i class="bi bi-patch-check-fill"></i> All domestic installations are MCS accredited.</li>
+          <li><i class="bi bi-patch-check-fill"></i> All commercial installations are MCS accredited.</li>
         </ul>
 
         <!-- Logos -->
         <div class="cert-logos">
-          <a href="https://mcscertified.com/" target="_blank" rel="noopener" class="logo-item" aria-label="MCS Certified">
-            <img src="mcs-certified-solar-store-uk.jpg" alt="MCS Certified logo">
-          </a>
-          <a href="https://www.recc.org.uk/" target="_blank" rel="noopener" class="logo-item" aria-label="RECC">
-            <img src="recc-logo-hi-res.jpg" alt="RECC logo">
-          </a>
-          <a href="https://www.trustmark.org.uk/" target="_blank" rel="noopener" class="logo-item" aria-label="TrustMark">
-            <img src="trustmark-uk-logo.jpg" alt="TrustMark logo">
-          </a>
-        </div>
-      </div>
+          <div class="logo-row mcs">
+            <a href="https://mcscertified.com/" target="_blank" rel="noopener" class="logo-item mcs" aria-label="MCS Certified">
+              <img src="mcs-certified-solar-store-uk.jpg" alt="MCS Certified logo">
+            </a>
+          </div>
 
-      <!-- Right image (optional artwork/photo) -->
+          <div class="logo-row duo">
+            <a href="https://www.recc.org.uk/" target="_blank" rel="noopener" class="logo-item" aria-label="RECC">
+              <img src="recc-logo-hi-res.jpg" alt="RECC logo">
+            </a>
+            <a href="https://www.trustmark.org.uk/" target="_blank" rel="noopener" class="logo-item" aria-label="TrustMark">
+              <img src="trustmark-uk-logo.jpg" alt="TrustMark logo">
+            </a>
+          </div>
+        </div>
+      </div><!--  ✅ CLOSE the left column -->
+
+      <!-- RIGHT: your Solar Store logo image (sits beside the left column on lg+) -->
       <div class="col-lg-4">
         <div class="cert-image-wrap">
-          <!-- Replace with your own image -->
-          <img src="solar-store-UK-logo-big.jpg" alt="Accredited solar installation" class="cert-image">
+          <img src="solar-panel-for-house-and-commercial-solar-store-uk-menai-bridge-wales.jpg" alt="Solar Store logo" class="cert-image">
         </div>
       </div>
+
     </div>
 
-    <!-- Self-sufficiency highlight -->
-    <div class="row g-4 align-items-center cert-highlight">
-      <div class="col-lg-6">
-        <div class="self-card">
-          <div class="self-badge">Real result</div>
-          <h3 class="self-title">Customer example: <span>100% self-sufficiency day</span></h3>
-          <p class="self-text">
-            A typical 14-panel array with a 6&nbsp;kW inverter and 10&nbsp;kWh battery covered
-            an entire day’s consumption from solar and stored power — <strong>zero grid usage</strong>.
-          </p>
-          <ul class="self-stats">
-            <li><i class="bi bi-sun-fill"></i> 14 panels • 5.6–6.0&nbsp;kWp</li>
-            <li><i class="bi bi-battery-charging"></i> 10&nbsp;kWh battery storage</li>
-            <li><i class="bi bi-lightning-charge-fill"></i> 6&nbsp;kW hybrid inverter</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <figure class="self-figure">
-          <!-- Replace with your own self-sufficiency image -->
-          <img src="Tristan-100-self-sufficiency.jpg" alt="Dashboard showing 100% self-sufficiency" class="self-image">
-          <figcaption>100% self-sufficiency from solar + battery (example day)</figcaption>
-        </figure>
-      </div>
-    </div>
   </div>
 </section>
 
+<!-- SECTION DIVIDER (LIGHTNING) -->
+<div class="lightning-between" aria-hidden="true">
+  <i class="bi bi-lightning-charge-fill"></i>
+</div>
 
+<!-- ===================== CUSTOMER EXAMPLE ===================== -->
+<section id="customer-example" class="case-section">
+  <div class="container">
+
+    <!-- Centered header -->
+    <div class="case-head">
+      <span class="case-badge">Real Customer Result</span>
+      <h2 class="case-title">99% Solar Self-Sufficiency in One Day</h2>
+      <p class="case-lead">
+        Real energy performance from a Solar Store customer. Only <strong>0.10 kWh</strong> was purchased from the grid.
+      </p>
+    </div>
+
+    <!-- Centered image -->
+    <figure class="case-figure">
+      <img src="Tristan-100-self-sufficiency.jpg"
+           alt="Daily solar energy report showing near total self-sufficiency"
+           class="case-image">
+      <figcaption>Live system report supplied by Solar Store customer</figcaption>
+    </figure>
+
+    <!-- Stats only -->
+<div class="case-stats-wrapper">
+  <ul class="case-stats">
+          <li><i class="bi bi-sun-fill"></i> <strong>Solar Production:</strong> 73.7 kWh</li>
+          <li><i class="bi bi-arrow-down-circle"></i> <strong>Self-Consumption:</strong> 22.70 kWh</li>
+          <li><i class="bi bi-upload"></i> <strong>Exported to Grid:</strong> 51.00 kWh</li>
+          <li><i class="bi bi-lightning-charge-fill"></i> <strong>Home Consumption:</strong> 20.1 kWh</li>
+          <li><i class="bi bi-shield-check"></i> <strong>Grid Usage:</strong> 0.10 kWh (99% Self-Powered)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="text-center mt-4">
+      <a href="contact.html" class="btn btn--primary case-cta">
+        Start Your Solar Journey
+        <span class="cta__dot">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="white" stroke-width="2" fill="none"/></svg>
+        </span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer" id="footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <!-- Brand + SEO blurb (LEFT) -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <img src="/solar-store-UK-logo-medium.jpg" alt="Solar Store — MCS-certified solar panel & battery storage installers in North Wales" loading="lazy">
+        </a>
+        <p class="footer-blurb">
+          <strong>Solar Store</strong> designs, supplies and installs
+          <strong>solar panels</strong> and <strong>battery storage</strong> for
+          homes and businesses. MCS-certified installers based in
+          <strong>Menai Bridge, Anglesey</strong> serving
+          <strong>North Wales</strong>, <strong>Wales &amp; England</strong>.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/gallery">Project Gallery</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h4 class="footer-title">Services</h4>
+        <ul class="footer-list">
+          <li><a href="/services/solar-domestic">Solar Panels for Homes</a></li>
+          <li><a href="/services/solar-commercial">Solar Panels for Commercial</a></li>
+          <li><a href="/services/battery-storage">Solar Battery Storage & Add-Ons</a></li>
+          <li><a href="/services/ev-charging">EV Charging</a></li>
+          <li><a href="/services/maintenance">Off-Grid Solar Systems</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Policies + Social -->
+      <div class="footer-col">
+        <h4 class="footer-title">Policies</h4>
+        <ul class="footer-list">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/cookie-policy">Cookie Policy</a></li>
+        </ul>
+
+        <h4 class="footer-title mt-16">Social Media</h4>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.facebook.com/TheSolarStoreUK/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="social-btn" href="https://www.instagram.com/solar_store_uk" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="social-btn" href="https://www.linkedin.com/company/solarstoreukltd" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a class="social-btn" href="https://x.com/SolarStoreUK" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-rule" />
+
+    <div class="footer-legal">
+      <p>Solar Store is the trading name of North Wales Renewables.</p>
+      <p>MCS – NAP 20367 &nbsp;•&nbsp; Registered under 8389985 &nbsp;•&nbsp; VAT No: 161310162</p>
+      <p class="footer-copy">
+        © 2025 Solar Store. All rights reserved. Website design by
+        <a href="https://cleandesignuk.com" target="_blank" rel="noopener">Clean Design UK</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+      <!-- TRUST PILL WITH AVATARS -->
+<div class="talk-pill trust-pill">
+  <!-- Trustpilot badge (TOP + CENTERED) -->
+  <a href="https://uk.trustpilot.com/review/solarstore.biz"
+     target="_blank" rel="noopener"
+     class="trustpilot-top" aria-label="See our Trustpilot reviews">
+    <img class="tp-logo"
+         src="Trustpilot-logo-removebg-preview.png"
+         alt="Trustpilot" />
+    <span class="tp-excellent">
+      <!-- green star icon -->
+      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#00B67A" d="M12 2l2.9 6.8 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.8 21l1.7-7L2 9.4l7.1-.6z"/>
+      </svg>
+      Rated Excellent
+    </span>
+  </a>
+
+  <!-- Avatars + trust copy (BOTTOM ROW) -->
+  <div class="trust-content">
+    <div class="avatars" aria-hidden="true">
+      <img src="client-testimonial.jpg" alt="homeowner">
+      <img src="client-testimonial-2.jpg" alt="business owner">
+    </div>
+    <span class="pill-text">Trusted by <strong>50+ homes &amp; businesses</strong></span>
+  </div>
+</div>
 
 <script>
   const hamburger = document.querySelector('.hamburger');
@@ -721,6 +914,131 @@
     }
   });
 </script>
+
+<script>
+  const servicesMq = window.matchMedia('(max-width: 768px)');
+  let servicesSwiper;
+
+  function mountServicesSwiper() {
+    if (!servicesSwiper) {
+      servicesSwiper = new Swiper('.services-swiper', {
+        slidesPerView: 1.1,
+        spaceBetween: 16,
+        centeredSlides: true,
+        loop: false,
+        speed: 450,
+        allowTouchMove: true,
+        pagination: {
+          el: '.services-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          0:   { slidesPerView: 1.1, spaceBetween: 14, centeredSlides: true },
+          480: { slidesPerView: 1.2, spaceBetween: 16, centeredSlides: true }
+        }
+      });
+    }
+  }
+
+  function unmountServicesSwiper() {
+    if (servicesSwiper) {
+      servicesSwiper.destroy(true, true);
+      servicesSwiper = null;
+    }
+  }
+
+  // Initial state
+  if (servicesMq.matches) mountServicesSwiper();
+
+  // React to breakpoint changes
+  servicesMq.addEventListener('change', (e) => {
+    if (e.matches) mountServicesSwiper();
+    else unmountServicesSwiper();
+  });
+</script>
+
+
+
+<script>
+
+  const mq = window.matchMedia('(max-width: 768px)');
+
+  const gallerySwiper = new Swiper('.gallery-swiper', {
+    slidesPerView: 1.05,
+    spaceBetween: 12,
+    centeredSlides: true,
+    loop: true,
+    // key bit
+    enabled: mq.matches,
+  });
+
+  // Toggle when viewport crosses the breakpoint
+  mq.addEventListener('change', (e) => {
+    if (e.matches) {
+      gallerySwiper.enable();
+    } else {
+      gallerySwiper.disable();
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  const form = document.getElementById('enquiry'); // ✅ correct form
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Email validation
+    const emailField = form.querySelector('#email');
+    const email = emailField.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Email',
+        text: 'Please enter a valid email address.',
+        confirmButtonColor: '#feda3e'
+      });
+      return;
+    }
+
+    // Optional: small UX lock on button
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+
+    try {
+      // Send to Web3Forms without leaving the page
+      const resp = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (resp.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Thank you! ⚡',
+          text: 'Our team will get in touch with you soon.',
+          confirmButtonColor: '#feda3e'
+        });
+        form.reset();
+      } else {
+        const data = await resp.json().catch(() => ({}));
+        throw new Error(data.message || 'Submission failed.');
+      }
+    } catch (err) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Something went wrong',
+        text: err.message || 'Please try again later.',
+        confirmButtonColor: '#feda3e'
+      });
+    } finally {
+      btn.disabled = false;
+    }
+  });
+</script>
+
 
 
 </body>

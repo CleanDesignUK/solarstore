@@ -10,6 +10,8 @@
   --glass-bg: rgba(255,255,255,0.72);
   --glass-stroke: rgba(0,0,0,0.10);
   --muted: rgba(0,0,0,0.65);
+--radius: 14px;
+
 }
 
 /* ===========================
@@ -248,6 +250,66 @@ a{ color:inherit; text-decoration:none }
   width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2;
 }
 
+/* Make the hero button visually match inputs and feel premium */
+.hero-form .hero-quote{
+  border-radius: 999px;
+  padding: .9rem 1.2rem;              /* same vertical rhythm as inputs */
+  line-height: 1;
+  height: 48px;                        /* lock height so it aligns with inputs */
+  box-shadow: 0 6px 18px rgba(0,0,0,.10);
+}
+
+/* Keep the dot neat on this button */
+.hero-form .hero-quote .cta__dot{
+  width: 36px;
+  height: 36px;
+  background: #111;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* Tight, crisp arrow */
+.hero-form .hero-quote .cta__dot svg{
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+/* Hover/focus polish */
+@media (hover:hover){
+  .hero-form .hero-quote:hover{
+    filter: brightness(.97);
+    box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  }
+}
+.hero-form .hero-quote:focus-visible{
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(254,218,62,.45), 0 6px 18px rgba(0,0,0,.10);
+}
+
+/* Mobile: make the button full width so the trio stacks nicely */
+@media (max-width: 720px){
+  .hero-form .hero-quote{
+    width: 100%;
+    justify-content: space-between;    /* label left, dot right */
+  }
+}
+
+/* Center "Get Quote" text on small screens */
+@media (max-width: 720px){
+  .hero-form .hero-quote{
+    justify-content: center;   /* center text */
+    text-align: center;
+  }
+  .hero-form .hero-quote .cta__dot{
+    display: none;             /* hide arrow on small screen */
+  }
+}
+
+
 /* Interactions */
 @media (hover:hover){
   .cta:hover { filter: brightness(.97); box-shadow: 0 8px 22px rgba(0,0,0,.12); }
@@ -403,6 +465,24 @@ a{ color:inherit; text-decoration:none }
   width:42px; height:42px; border:none; border-radius:50%;
   display:grid; place-items:center; cursor:pointer;
   background:var(--yellow);
+}
+
+/* Float ABOVE everything */
+.trust-pill{
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;               /* higher than any section/header */
+  padding: .9rem 1.2rem;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.18);
+}
+
+/* Hide on small screens */
+@media (max-width: 768px){
+  .trust-pill{ display: none !important; }
 }
 
 /* ===========================
@@ -582,6 +662,10 @@ a{ color:inherit; text-decoration:none }
   text-decoration: underline;
 }
 
+.testi-swiper,
+.swiper { overflow: hidden !important; }
+
+
 /* ============== CERTIFICATIONS ============== */
 .cert-section{
   background:#fff;
@@ -609,6 +693,7 @@ a{ color:inherit; text-decoration:none }
   margin: 6px 0 18px;
   display:grid;
   gap:8px;
+  padding-bottom: 40px;
 }
 .cert-bullets li{
   display:flex;
@@ -621,32 +706,62 @@ a{ color:inherit; text-decoration:none }
   margin-top:3px;
 }
 
-/* Logos row */
-.cert-logos{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(120px, 1fr));
-  gap:18px;
-  align-items:center;
-  max-width: 640px;
+/* ===== FIXED CERT LOGO LAYOUT ===== */
+.cert-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
 }
-.logo-item{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 14px;
-  background:#fafafa;
-  border:1px solid rgba(0,0,0,.06);
-  border-radius:14px;
-  transition:transform .15s ease, box-shadow .2s ease;
+
+/* First row - MCS alone */
+.logo-row.mcs {
+  display: flex;
+  justify-content: flex-start;
 }
-.logo-item:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+
+/* Second row - RECC + TrustMark */
+.logo-row.duo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-.logo-item img{
-  max-height: 44px;           /* adjust if your source art is shorter/taller */
-  width:auto;
+
+/* Clean logo style - no background/border */
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
+
+.logo-item img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-height: 65px;
+}
+
+/* Make MCS logo bigger */
+.logo-item.mcs img {
+  max-width: 300px;    /* prevents overlap */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile stack */
+@media (max-width: 576px) {
+  .logo-row.duo {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
 
 /* Right side hero image */
 .cert-image-wrap{
@@ -711,10 +826,283 @@ a{ color:inherit; text-decoration:none }
   color:rgba(0,0,0,.7);
 }
 
-/* Responsive tweaks */
-@media (max-width: 991px){
-  .cert-logos{ grid-template-columns: repeat(3, 1fr); }
+
+/* Extra top spacing after the lightning before this section */
+.lightning-between + .cert-section {
+  padding-top: clamp(80px, 8vw, 120px);   /* more air above the content */
 }
+
+/* Global between-sections lightning */
+.lightning-between{
+  position: relative;
+  height: 0;                  /* no extra layout height */
+  z-index: 5;                 /* on top of both sections */
+}
+.lightning-between i{
+  position: absolute;
+  left: 50%;
+  top: 0;                     /* sits on the boundary */
+  transform: translate(-50%, -50%);  /* half above, half below */
+  font-size: 96px;            /* bigger icon */
+  line-height: 1;
+  color: var(--yellow, #feda3e);
+  pointer-events: none;
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,.12));
+}
+
+/* Rows */
+.logo-row {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Row 1: MCS alone */
+.logo-row.mcs {
+  justify-content: flex-start;
+}
+
+/* Row 2: RECC + TrustMark side-by-side */
+.logo-row.duo {
+  justify-content: flex-start; /* or space-between */
+}
+
+/* Logo items — no borders/background (clean) */
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform .15s ease;
+}
+.logo-item:hover { transform: translateY(-2px); }
+
+
+/* Responsive: stack the duo on small screens */
 @media (max-width: 576px){
-  .cert-logos{ grid-template-columns: 1fr; }
+  .logo-row.duo { flex-direction: column; align-items: flex-start; }
 }
+
+/* CERT logos layout */
+.cert-logos{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-top:20px;
+}
+.logo-row{ display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+.logo-row.mcs{ justify-content:flex-start; }
+.logo-row.duo{ justify-content:flex-start; }
+
+/* Logos – clean */
+.cert-logos .logo-item{
+  display:flex; align-items:center; justify-content:flex-start;
+  background:none; border:0; padding:0; box-shadow:none;
+}
+.cert-logos .logo-item img{
+  display:block; height:auto; width:auto; max-height:72px;   /* regular logos */
+}
+.cert-logos .logo-item.mcs img{
+  max-height:140px;                                          /* ✅ make MCS wider/taller */
+}
+
+/* Keep the right column aligned on big screens; give a little top gap on small */
+@media (max-width: 991.98px){
+  .cert-image-wrap{ margin-top:12px; }
+}
+/* Remove hover effect ONLY for MCS logo */
+.logo-item.mcs:hover {
+  transform: none !important;
+}
+
+
+.case-section {
+  background: #fff8d6;
+  padding: clamp(56px, 6vw, 96px) 0;
+}
+
+.case-head {
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto 18px;
+}
+
+.case-badge {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 800;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.case-title {
+  font-family: "Quicksand";
+  font-weight: 800;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  margin-bottom: 6px;
+}
+
+.case-lead {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.case-figure {
+  max-width: 980px;
+  margin: 20px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  background: white;
+  box-shadow: 0 10px 24px rgba(0,0,0,.1);
+}
+
+.case-image {
+  width: 100%;
+  height: auto;
+}
+
+.case-figure figcaption {
+  font-size: .9rem;
+  text-align: center;
+  padding: 8px;
+  color: rgba(0,0,0,.7);
+}
+
+.case-stats {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.case-stats i {
+  color: #53c704;
+  margin-right: 8px;
+}
+
+.case-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.case-cta .cta__dot {
+  width: 34px;
+  height: 34px;
+  background: #000;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.case-stats-wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.case-stats {
+  text-align: left;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* ===== Footer (slimmer) ===== */
+.site-footer{
+  background:#fff;
+  color:#0c0c0d;
+  border-top:1px solid rgba(0,0,0,.06);
+  padding: 28px 0 32px;             /* thinner overall */
+}
+
+.footer-inner{ width:min(1280px,92%); margin-inline:auto; }
+
+.footer-grid{
+  display:grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;  /* brand + 3 cols */
+  gap: clamp(16px,2.4vw,36px);
+  align-items:flex-start;
+}
+
+/* Headings */
+.footer-title{
+  margin:0 0 .6rem 0;
+  font-family:"Quicksand", ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:800;
+  font-size:1rem;
+  color: var(--green);
+}
+
+/* Lists & links */
+.footer-list{ list-style:none; padding:0; margin:0; display:grid; gap:.45rem; }
+.footer-list a{
+  color:#0c0c0d;
+  text-decoration:none;
+  transition: color .18s ease;
+}
+.footer-list a:hover{ color: var(--yellow); }
+
+/* Brand block */
+.footer-brand { display:grid; gap:.6rem; }
+.footer-logo img{ height:80px; width:auto; display:block; }
+.footer-blurb{
+  margin:0;
+  line-height:1.55;
+  font-size:.95rem;
+}
+
+/* Social */
+.footer-social{ display:flex; gap:.5rem; margin-top:.35rem; }
+.social-btn{
+  width:36px; height:36px;
+  display:grid; place-items:center;
+  border-radius:50%;
+  border:1px solid rgba(0,0,0,.15);
+  color:#0c0c0d;
+  transition: color .18s ease, border-color .18s ease, transform .06s ease;
+}
+.social-btn:hover{ color: var(--yellow); border-color: var(--yellow); transform: translateY(-1px); }
+
+/* Rule + legal */
+.footer-rule{ border:0; height:1px; background:rgba(0,0,0,.08); margin: 18px 0; }
+.footer-legal{ font-size:.92rem; line-height:1.55; }
+.footer-copy a{ color:#0c0c0d; text-decoration:none; }
+.footer-copy a:hover{ color: var(--yellow); }
+
+/* Utility */
+.mt-16{ margin-top:1rem; }
+
+/* Responsive */
+@media (max-width: 992px){
+  .footer-grid{ grid-template-columns: 1fr 1fr; }
+  .footer-brand{ order:-1; }
+}
+@media (max-width: 560px){
+  .footer-grid{ grid-template-columns: 1fr; }
+  .footer-logo img{ height:40px; }
+}
+
+/* Add consistent top padding to first element inside any section */
+section > *:first-child {
+  padding-top: 40px; /* adjust to your spacing preference */
+}
+
+/* Consistent spacing for all sections */
+section {
+  padding-bottom: 80px;
+}
+
+

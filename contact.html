@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Contact Solar Store | Solar Panels & Battery Storage</title>
+  <meta name="description" content="Contact Solar Store for MCS-certified solar panel installation, battery storage and EV charging across North Wales, Wales & England." />
+
+  <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/jpeg" sizes="32x32" href="/solar-store-UK-logo-small.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#feda3e">
+
+  <!-- Fonts / Icons / (Bootstrap optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+ 
+  
+  
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+ <!-- NAVBAR -->
+<header class="site-header">
+  <div class="container header-row">
+    <!-- Brand -->
+    <a class="brand" href="/">
+      <img src="solar-store-UK-logo-medium.jpg" alt="Solar Store" class="logo">
+      <span class="brand-name">Solar Store</span>
+    </a>
+
+    <!-- Burger -->
+    <button class="hamburger" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Nav + the ONLY CTA -->
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+
+        <li class="has-sub">
+          <a href="/services" class="sub-toggle">
+            Services
+            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="submenu" aria-label="Services submenu">
+            <li><a href="/services/solar-domestic">Solar Panels for Homes</a></li>
+            <li><a href="/services/solar-commercial">Commercial Solar Systems</a></li>
+            <li><a href="/services/battery-storage">Battery Storage & Add-Ons</a></li>
+            <li><a href="/services/ev-charging">EV Charging</a></li>
+            <li><a href="/services/maintenance">Off-Grid Solar Systems</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/gallery">Project Gallery</a></li>
+      </ul>
+
+      <!-- The single CTA -->
+      <a class="cta nav-cta" href="#enquiry" aria-label="Enquire Now">
+        <span>Enquire Now</span>
+        <span class="cta__dot">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="#fff" stroke-width="2"/></svg>
+        </span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero__bg" role="img" aria-label="Clean energy background"></div>
+    <div class="container contact-hero__inner">
+      <h1>Contact Us</h1>
+      <p>We’re here to help with <strong>solar panels, battery storage</strong> and <strong>EV charging</strong>. Tell us what you need and we’ll get back to you quickly.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="contact-wrap">
+    <div class="container contact-grid">
+      <!-- LEFT: FORM (Web3Forms) -->
+      <div class="contact-card">
+        <h2 class="contact-heading">Let’s Get Started</h2>
+
+        <!-- Contact Form (Web3Forms) -->
+<form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  <!-- REQUIRED: your Web3Forms access key -->
+  <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+
+  <!-- (Optional) anti-bot honeypot -->
+  <input type="checkbox" name="botcheck" id="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
+
+  <div class="form-row">
+    <label for="full_name">Full Name*</label>
+    <input type="text" id="full_name" name="name" placeholder="Your full name" required />
+  </div>
+
+  <div class="form-row">
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+  </div>
+
+  <div class="form-row">
+    <label for="phone">Phone*</label>
+    <input type="tel" id="phone" name="phone" placeholder="+44 7xxx xxxxxx" required />
+  </div>
+
+
+          <div class="form-row">
+            <label for="service">Services You Need*</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Solar Panels - Homes</option>
+    <option>Commercial Solar Systems</option>
+    <option>Battery & Add-Ons</option>
+    <option>EV Charging</option>
+    <option>Off-Grid Solar Systems</option>
+            </select>
+          </div>
+
+
+          <button type="submit" class="btn btn--primary">
+            Send Enquiry
+            <i class="bi bi-send-fill" aria-hidden="true" style="margin-left:.4rem"></i>
+          </button>
+
+          <p class="form-note">By submitting this form you agree to our <a href="/privacy">Privacy Policy</a>.</p>
+        </form>
+      </div>
+
+      <!-- RIGHT: INFO -->
+      <aside class="contact-info">
+        <div class="info-block">
+          <h3>Address</h3>
+          <p>Sunshine, Holyhead Rd, Menai Bridge LL59 5RH, United Kingdom</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Phone</h3>
+          <p><a href="tel:+447990945510">+44 7990 945510</a></p>
+        </div>
+
+        <div class="info-block">
+          <h3>Email</h3>
+          <p><a href="mailto:info@solarstore.biz">info@solarstore.biz</a></p>
+        </div>
+
+        <div class="info-block">
+          <h3>Follow</h3>
+          <div class="socials">
+            <a href="https://www.facebook.com/TheSolarStoreUK/" aria-label="Facebook" class="soc"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/solar_store_uk" aria-label="Instagram" class="soc"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/solarstoreukltd" aria-label="LinkedIn" class="soc"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/SolarStoreUK" aria-label="X" class="soc"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+         <div class="contact-map" style="margin-top:15px;">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305726.6888224497!2d-4.779708810937501!3d53.22699650000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4865b276a502a09b%3A0x8b45de3cd69ad0de!2sSolar%20Store!5e0!3m2!1sen!2sid!4v1761676375681!5m2!1sen!2sid"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+      </aside>
+    </div>
+  </section>
+
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <div class="testi-head">
+      <div>
+        <p class="eyebrow">*Testimonials</p>
+        <h2 class="testi-title">Voices of a Greener Tomorrow</h2>
+        <p class="testi-desc">Real feedback from homeowners and businesses who chose Solar Store for solar, batteries, and EV charging.</p>
+      </div>
+
+      <div class="testi-nav">
+        <button class="testi-prev" aria-label="Previous testimonials">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="testi-next" aria-label="Next testimonials">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper testi-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">AK</div>
+              <div>
+                <h3 class="name">Andy &amp; Katie Clarke</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              14 panels with 6 kW inverter + batteries installed perfectly. Great communication from Neil &amp; Ceri and a tidy, professional team. Highly recommend.
+            </p>
+            <span class="tag">Solar + Battery</span>
+          </article>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">T</div>
+              <div>
+                <h3 class="name">Taylor</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              From enquiry to aftercare — faultless. Competitive pricing, tidy engineers, and fast help with monitoring months later. Nothing is too much trouble.
+            </p>
+            <span class="tag">Aftercare</span>
+          </article>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">BH</div>
+              <div>
+                <h3 class="name">Ben Horrigan</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              Incredible help transferring FiT and certification — on a day off — even though I wasn’t a customer. We recovered £2,000 thanks to their advice.
+            </p>
+            <span class="tag">Support</span>
+          </article>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">K</div>
+              <div>
+                <h3 class="name">Karen</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              Panels, batteries, and EV charger fitted. Worth the wait — our bills have more than halved. First-class job from Neil, Ceri, and team.
+            </p>
+            <span class="tag">Solar + Battery + EV</span>
+          </article>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">NS</div>
+              <div>
+                <h3 class="name">Nicola Sleapwood</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              Listened to our needs and built the right system at a very good price. Great kit, great install, great value.
+            </p>
+            <span class="tag">Custom System</span>
+          </article>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">DA</div>
+              <div>
+                <h3 class="name">David Atkins</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              Superb after-sales — they helped sort my inverter on a Sunday. Friendly, efficient, strongly recommend.
+            </p>
+            <span class="tag">Aftercare</span>
+          </article>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">B</div>
+              <div>
+                <h3 class="name">Bryn</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              Very professional, courteous, and easy to deal with. Great experience from start to finish.
+            </p>
+            <span class="tag">Service</span>
+          </article>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">AB</div>
+              <div>
+                <h3 class="name">Anthony Bewley</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              Inverter issue after 2 years? Ceri handled warranty with the manufacturer and got a quick replacement. Excellent service.
+            </p>
+            <span class="tag">Warranty</span>
+          </article>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="swiper-slide">
+          <article class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">PW</div>
+              <div>
+                <h3 class="name">Paul Walsh</h3>
+                <div class="stars" aria-label="5 out of 5">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="quote">
+              Club install completed within two weeks and already saving big on energy. Ceri &amp; Neil were fantastic — highly recommended.
+            </p>
+            <span class="tag">Commercial</span>
+          </article>
+        </div>
+
+       
+
+      </div>
+      
+    </div>
+     <!-- Trustpilot Badge -->
+<div class="trustpilot-wrapper text-center mt-4">
+  <a href="https://uk.trustpilot.com/review/solarstore.biz" target="_blank" rel="noopener" class="trustpilot-link">
+    <img src="trustpilot-logo-med.png" alt="Trustpilot Logo" class="trustpilot-logo">
+    <div class="tp-rating">
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <span class="rated-text">Rated Excellent on Trustpilot</span>
+    </div>
+    <span class="see-reviews">See more reviews →</span>
+  </a>
+</div>
+  </div>
+</section>
+
+  <!-- ====== FOOTER ====== -->
+<footer class="site-footer" id="footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <!-- Brand + SEO blurb (LEFT) -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <img src="/solar-store-UK-logo-medium.jpg" alt="Solar Store — MCS-certified solar panel & battery storage installers in North Wales" loading="lazy">
+        </a>
+        <p class="footer-blurb">
+          <strong>Solar Store</strong> designs, supplies and installs
+          <strong>solar panels</strong> and <strong>battery storage</strong> for
+          homes and businesses. MCS-certified installers based in
+          <strong>Menai Bridge, Anglesey</strong> serving
+          <strong>North Wales</strong>, <strong>Wales &amp; England</strong>.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/gallery">Project Gallery</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h4 class="footer-title">Services</h4>
+        <ul class="footer-list">
+          <li><a href="/services/solar-domestic">Solar Panels for Homes</a></li>
+          <li><a href="/services/solar-commercial">Solar Panels for Commercial</a></li>
+          <li><a href="/services/battery-storage">Solar Battery Storage & Add-Ons</a></li>
+          <li><a href="/services/ev-charging">EV Charging</a></li>
+          <li><a href="/services/maintenance">Off-Grid Solar Systems</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Policies + Social -->
+      <div class="footer-col">
+        <h4 class="footer-title">Policies</h4>
+        <ul class="footer-list">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/cookie-policy">Cookie Policy</a></li>
+        </ul>
+
+        <h4 class="footer-title mt-16">Social Media</h4>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.facebook.com/TheSolarStoreUK/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="social-btn" href="https://www.instagram.com/solar_store_uk" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="social-btn" href="https://www.linkedin.com/company/solarstoreukltd" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a class="social-btn" href="https://x.com/SolarStoreUK" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-rule" />
+
+    <div class="footer-legal">
+      <p>Solar Store is the trading name of North Wales Renewables.</p>
+      <p>MCS – NAP 20367 &nbsp;•&nbsp; Registered under 8389985 &nbsp;•&nbsp; VAT No: 161310162</p>
+      <p class="footer-copy">
+        © 2025 Solar Store. All rights reserved. Website design by
+        <a href="https://cleandesignuk.com" target="_blank" rel="noopener">Clean Design UK</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const body = document.body;
+
+  hamburger.addEventListener('click', () => {
+    body.classList.toggle('nav-open');
+    const isOpen = body.classList.contains('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Mobile: toggle Services submenu
+  document.querySelectorAll('.has-sub > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        link.parentElement.classList.toggle('open');
+      }
+    });
+  });
+</script>
+
+  <script>
+    // optional: smooth-scroll to form if header CTA pressed
+    document.querySelectorAll('a[href="#enquiry"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        document.querySelector('#enquiry').scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+
+  <!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('contactSubmit');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // simple loading state
+    submitBtn.disabled = true;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+
+    try {
+      const formData = new FormData(form);
+
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        // Success SweetAlert
+        Swal.fire({
+          icon: 'success',
+          title: 'Thanks! ⚡',
+          text: 'Thank you — our team will get in touch with you soon.',
+          confirmButtonColor: '#feda3e',
+          confirmButtonText: 'OK'
+        });
+        form.reset();
+      } else {
+        // Error from Web3Forms
+        Swal.fire({
+          icon: 'error',
+          title: 'Submission failed',
+          text: data.message || 'Please try again in a moment.'
+        });
+      }
+    } catch (err) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Network error',
+        text: 'Unable to send your enquiry. Please check your connection and try again.'
+      });
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
+</script>
+
+
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const testiSwiper = new Swiper('.testi-swiper', {
+    slidesPerView: 4,
+    slidesPerGroup: 4,     // scroll 4 at a time
+    spaceBetween: 18,
+    speed: 450,
+    allowTouchMove: true,  // swipe on touch
+    navigation: {
+      nextEl: '.testi-next',
+      prevEl: '.testi-prev',
+    },
+    // No autoplay as requested
+    breakpoints: {
+      0:   { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 16 },
+      576: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 16 },
+      992: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 18 },
+      1200:{ slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 18 }
+    }
+  });
+</script>
+</body>
+</html>
