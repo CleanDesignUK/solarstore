@@ -417,44 +417,304 @@ a{ color:inherit; text-decoration:none }
   *{ transition:none !important; animation:none !important }
 }
 
-/* === Global section divider (auto bolt between sections) === */
-:root{
-  --bolt-size: 88px;             /* icon size */
-  --bolt-overlap: 54%;           /* how far it sits between sections */
-  --bolt-color: var(--yellow, #feda3e);
+/* ====== GLOBAL BUTTONS ====== */
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-weight:700; color:var(--ink);
+  padding:.8rem 1.15rem; border-radius:999px;
+  text-decoration:none; border:1px solid transparent;
+  box-shadow:var(--shadow);
+  transition:filter .18s ease, box-shadow .18s ease, transform .06s ease;
+}
+.btn:active{ transform:translateY(1px); }
+
+.btn--primary{
+  background:var(--yellow); color:var(--black);
+  border-color:var(--yellow);
+}
+.btn--primary:hover{ background: var(--black); box-shadow:var(--shadow-lg);color: var(--yellow);}
+
+.btn--ghost{
+  background:#fff; color:var(--ink);
+  border-color:rgba(0,0,0,.12);
+}
+.btn--ghost:hover{ box-shadow:var(--shadow-lg); }
+
+/* Map existing buttons to the global look without changing HTML everywhere */
+.btn-about, .btn-gallery, .desktop-cta, .mobile-cta{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-weight:700; border-radius:999px; text-decoration:none;
+  padding:.8rem 1.15rem; border:1px solid rgba(0,0,0,.08);
+  background:var(--brand); color:var(--brand-ink);
+  box-shadow:var(--shadow);
+  transition:filter .18s ease, box-shadow .18s ease, transform .06s ease;
+}
+.btn-about:hover, .btn-gallery:hover, .desktop-cta:hover, .mobile-cta:hover{
+  filter:brightness(.98); box-shadow:var(--shadow-lg);
 }
 
-.ss-section{
-  position: relative;            /* anchor pseudo-element */
-  /* optional: improves anchor scrolling with fixed header */
-  scroll-margin-top: 90px;
+/* ===== Testimonials ===== */
+.testimonials-section{
+  padding: clamp(56px, 6vw, 92px) 0;
+  background: #fff8d6; /* soft yellow to match About */
 }
 
-/* Insert a bolt at the start edge of each section that follows another .ss-section */
-.ss-section + .ss-section::before{
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, calc(-1 * var(--bolt-overlap)));
-  width: var(--bolt-size);
-  height: var(--bolt-size);
-  pointer-events: none;
-  z-index: 5;
-  /* Color */
-  background-color: var(--bolt-color);
-  /* SVG mask (Bootstrap lightning-charge-fill) */
-  -webkit-mask: url("data:image/svg+xml;utf8,\
-  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'>\
-    <path d='M11.251 0a.75.75 0 0 1 .679 1.06L9.839 5H12a.75.75 0 0 1 .576 1.233l-6 7.5A.75.75 0 0 1 5 13.5L6.837 9H4a.75.75 0 0 1-.679-1.06l4.09-7.5A.75.75 0 0 1 8.09 0h3.16Z'/>\
-  </svg>") no-repeat center / contain;
-          mask: url("data:image/svg+xml;utf8,\
-  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'>\
-    <path d='M11.251 0a.75.75 0 0 1 .679 1.06L9.839 5H12a.75.75 0 0 1 .576 1.233l-6 7.5A.75.75 0 0 1 5 13.5L6.837 9H4a.75.75 0 0 1-.679-1.06l4.09-7.5A.75.75 0 0 1 8.09 0h3.16Z'/>\
-  </svg>") no-repeat center / contain;
-  /* Soft shadow under the bolt */
-  filter: drop-shadow(0 12px 18px rgba(0,0,0,.12));
+.testi-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:1rem;
+  margin-bottom: clamp(20px, 3vw, 28px);
 }
 
-/* Quick tuners (optional per-page overrides)
-   Example: .ss-section + .ss-section { --bolt-size: 72px; --bolt-overlap: 48%; } */
+.testi-title{
+  font-family: "Quicksand", ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  margin: 0 0 .25rem 0;
+}
+.testi-desc{
+  margin: 0;
+  max-width: 780px;
+  color: #333;
+}
+
+.testi-nav{
+  display:flex; gap:.5rem;
+}
+.testi-nav button{
+  width:44px; height:44px; border-radius:12px;
+  border:1px solid rgba(0,0,0,.12);
+  background:#fff; display:grid; place-items:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  transition:transform .06s ease, box-shadow .18s ease, filter .18s ease;
+}
+.testi-nav button:hover{ filter:brightness(.98); box-shadow:0 8px 22px rgba(0,0,0,.12); }
+.testi-nav button:active{ transform:translateY(1px); }
+
+/* Swiper slide */
+.testi-swiper{ overflow:visible; }
+.swiper-slide{ height:auto; }
+
+/* Card */
+.testi-card{
+  background: #fff2b3;                  /* brand yellow, a touch deeper */
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:18px;
+  padding:20px 18px;
+  height:100%;
+  display:flex; flex-direction:column; gap:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+
+.testi-top{
+  display:flex; align-items:center; gap:12px;
+}
+
+.avatar{
+  width:44px; height:44px; border-radius:50%;
+  display:grid; place-items:center;
+  font-weight:800; color:#111;
+  background:#ffe370; border:1px solid rgba(0,0,0,.06);
+}
+
+.name{
+  font-size:1rem; font-weight:800; margin:0 0 2px 0; color:#111;
+}
+
+.stars{ color:#f4b400; font-size:1rem; line-height:1; }
+
+.quote{
+  color:#222; margin:4px 0 0 0; line-height:1.6;
+}
+
+.tag{
+  align-self:flex-start;
+  margin-top:auto;
+  font-size:.8rem; font-weight:700;
+  padding:.25rem .55rem; border-radius:999px;
+  background:#fff; border:1px solid rgba(0,0,0,.08);
+}
+
+/* Responsive counts are handled in JS via Swiper breakpoints */
+.trustpilot-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.trustpilot-logo {
+  height: 100px !important; /* ✅ Bigger logo */
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.tp-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.tp-rating i {
+  color: #00B67A; /* Trustpilot green */
+  font-size: 1.2rem;
+}
+
+.rated-text {
+  margin-left: 6px;
+  font-size: 1rem;
+}
+
+.see-reviews {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #00B67A;
+}
+
+.see-reviews:hover {
+  text-decoration: underline;
+}
+
+/* ============== CERTIFICATIONS ============== */
+.cert-section{
+  background:#fff;
+  padding: clamp(56px, 6vw, 96px) 0;
+}
+
+.cert-title{
+  font-family:"Quicksand", ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:800;
+  line-height:1.12;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  margin: 4px 0 10px;
+}
+
+.cert-lead{
+  font-size:1.06rem;
+  color:#333;
+  max-width: 760px;
+  margin-bottom: 12px;
+}
+
+.cert-bullets{
+  list-style:none;
+  padding:0;
+  margin: 6px 0 18px;
+  display:grid;
+  gap:8px;
+}
+.cert-bullets li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-weight:600;
+}
+.cert-bullets i{
+  color:#00B67A;
+  margin-top:3px;
+}
+
+/* Logos row */
+.cert-logos{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap:18px;
+  align-items:center;
+  max-width: 640px;
+}
+.logo-item{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  background:#fafafa;
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:14px;
+  transition:transform .15s ease, box-shadow .2s ease;
+}
+.logo-item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+.logo-item img{
+  max-height: 44px;           /* adjust if your source art is shorter/taller */
+  width:auto;
+}
+
+/* Right side hero image */
+.cert-image-wrap{
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow: 0 14px 36px rgba(0,0,0,.14);
+  border:1px solid rgba(0,0,0,.08);
+}
+.cert-image{ display:block; width:100%; height:auto; }
+
+/* Self-sufficiency highlight */
+.cert-highlight{ margin-top: 24px; }
+
+.self-card{
+  background:#fffef1;                /* soft brand yellow background */
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:18px;
+  padding:22px 22px 20px;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+.self-badge{
+  display:inline-block;
+  background:#111;
+  color:#fff;
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.02em;
+  padding:.25rem .55rem;
+  border-radius:999px;
+  margin-bottom:10px;
+}
+.self-title{
+  font-weight:800;
+  margin:0 0 8px;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+}
+.self-title span{ color:#1a7f00; }
+.self-text{ margin:0 0 12px; color:#333; }
+.self-stats{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:6px;
+  font-weight:600;
+}
+.self-stats i{ color:#53c704; margin-right:6px; }
+
+/* Self image */
+.self-figure{
+  margin:0;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow:0 12px 28px rgba(0,0,0,.10);
+  background:#fafafa;
+}
+.self-image{ display:block; width:100%; height:auto; }
+.self-figure figcaption{
+  font-size:.9rem;
+  padding:10px 12px;
+  color:rgba(0,0,0,.7);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px){
+  .cert-logos{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 576px){
+  .cert-logos{ grid-template-columns: 1fr; }
+}
