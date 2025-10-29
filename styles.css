@@ -665,6 +665,21 @@ a{ color:inherit; text-decoration:none }
 .testi-swiper,
 .swiper { overflow: hidden !important; }
 
+/* Trustpilot badge: stack text under stars on small screens */
+@media (max-width: 576px){
+  .tp-rating{
+    display: inline-block;      /* stop flex wrapping issues */
+    text-align: center;
+  }
+  .tp-rating i{                 /* keep the five stars on one line */
+    display: inline-block;
+    margin: 0 1px;
+  }
+  .tp-rating .rated-text{       /* force caption onto its own line */
+    display: block;
+    margin-top: 6px;
+  }
+}
 
 /* ============== CERTIFICATIONS ============== */
 .cert-section{
