@@ -6,6 +6,16 @@
   <title>About Solar Store | MCS-Certified Solar Panel & Battery Installers in Menai Bridge, Anglesey, North Wales & UK-Wide</title>
   <meta name="description" content="Solar Store (North Wales Renewables) — MCS-certified solar panel and battery storage installers based in Menai Bridge, Anglesey. We design, supply and install solar PV, battery storage, and EV charging for homes and businesses across North Wales, Wales, England and UK-wide." />
   <link rel="canonical" href="https://solarstore.biz/about" />
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/jpeg" sizes="32x32" href="/solar-store-UK-logo-small.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#feda3e">
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Global CSS (site styles) -->
   <link rel="stylesheet" href="styles.css" />
@@ -16,6 +26,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
 
   <!-- SEO/Schema -->
   <script type="application/ld+json">
@@ -46,115 +59,76 @@
   </script>
 </head>
 <body>
-  <!-- ===== Global Header (uses existing styles.css) ===== -->
+  <!-- NAVBAR -->
   <header class="site-header">
     <div class="container header-row">
+      <!-- Brand -->
       <a class="brand" href="/">
-        <img src="solar-store-UK-logo-medium.jpg" class="logo" alt="Solar Store" />
+        <img src="solar-store-UK-logo-medium.jpg" alt="Solar Store" class="logo">
         <span class="brand-name">Solar Store</span>
       </a>
 
+      <!-- Burger -->
       <button class="hamburger" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav id="primary-nav" class="nav">
-        <a class="action-pill mobile-cta" href="/contact">
-          <span>Enquire Now</span>
-          <span class="dot"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-        </a>
+      <!-- Nav + the ONLY CTA -->
+      <nav id="primary-nav" class="nav" aria-label="Primary">
         <ul class="menu">
           <li><a href="/">Home</a></li>
-          <li><a class="is-current" href="/about">About</a></li>
+          <li><a href="about-solar-store-menai-bridge.html">About</a></li>
+
           <li class="has-sub">
-            <a href="#" class="sub-toggle">Services
-              <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+            <a href="/services" class="sub-toggle">
+              Services
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
             </a>
             <ul class="submenu" aria-label="Services submenu">
-              <li><a href="/services/domestic-solar">Solar PV – Domestic</a></li>
-              <li><a href="/services/commercial-solar">Solar PV – Commercial</a></li>
-              <li><a href="/services/battery-storage">Battery Storage</a></li>
+              <li><a href="/services/solar-domestic">Solar Panels for Homes</a></li>
+              <li><a href="/services/solar-commercial">Commercial Solar Systems</a></li>
+              <li><a href="/services/battery-storage">Battery Storage & Add-Ons</a></li>
               <li><a href="/services/ev-charging">EV Charging</a></li>
-              <li><a href="/services/maintenance">Maintenance & Monitoring</a></li>
-              <li><a href="/services/off-grid">Off-Grid Solar</a></li>
-              <li><a href="/services/upgrades">System Upgrades</a></li>
-              <li><a href="/services/repairs">Repairs & Diagnostics</a></li>
+              <li><a href="/services/maintenance">Off-Grid Solar Systems</a></li>
             </ul>
           </li>
-          <li><a href="/gallery">Project Gallery</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
 
-      <a class="cta desktop-cta" href="/contact">
-        <span>Enquire Now</span>
-        <span class="cta__dot"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-      </a>
+          <li><a href="solar-panel-and-batteries-services-installation-gallery-menai-bridge.html">Project Gallery</a></li>
+        </ul>
+
+        <!-- The single CTA -->
+        <a class="cta nav-cta" href="contact.html" aria-label="Enquire Now">
+          <span>Enquire Now</span>
+          <span class="cta__dot">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="#fff" stroke-width="2"/></svg>
+          </span>
+        </a>
+      </nav>
     </div>
   </header>
-
-  <!-- ===== Page Hero (gradient like reference) ===== -->
-  <section class="hero hero--about" style="margin-top:64px;">
-    <div class="hero-bg" aria-hidden="true" style="
-      background: linear-gradient(90deg,#fff2b3 0%, #cde6bb 50%, #aee1d0 100%);
-      opacity: 1;"></div>
-    <div class="container hero-inner" style="grid-template-columns:1fr;">
-      <div class="glass-card" style="margin-inline:auto; text-align:center; max-width:900px;">
-        <span class="eyebrow">About Solar Store</span>
-        <h1 class="hero-title">MCS-Certified Solar Experts in Menai Bridge & Anglesey</h1>
-        <p class="hero-lead">
-          We design, supply and install high-performance <strong>solar PV</strong>, <strong>battery storage</strong> and
-          <strong>EV charging</strong> for homes and businesses across <strong>North Wales</strong>, wider
-          <strong>Wales</strong>, <strong>England</strong> and <strong>UK-wide</strong>. Trusted since 2013.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Divider (lightning) -->
-  <div class="lightning-between" aria-hidden="true">
-    <i class="bi bi-lightning-charge-fill"></i>
+<!-- HERO -->
+<section class="about-hero">
+  <div class="container">
+    <h1>About Solar Store</h1>
+    <p class="lead">MCS-certified solar panel installers based in <strong>Menai Bridge, Anglesey</strong>, serving <strong>North Wales, wider Wales, England</strong> and <strong>UK-wide</strong>.</p>
   </div>
+</section>
 
-  <!-- ===== Key Stats & Credibility ===== -->
-  <section class="about-metrics" style="padding: clamp(40px,6vw,80px) 0; background:#f7fbea;">
-    <div class="container">
-      <div class="row g-4" style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:24px;">
-        <div>
-          <h2 class="section-title" style="font-size: clamp(2rem,4.2vw,3.4rem);">500+ </h2>
-          <p class="section-description">Solar panels installed across Anglesey & North Wales</p>
-        </div>
-        <div>
-          <h2 class="section-title" style="font-size: clamp(2rem,4.2vw,3.4rem);">100+ </h2>
-          <p class="section-description">Happy homeowners & businesses</p>
-        </div>
-        <div>
-          <h2 class="section-title" style="font-size: clamp(2rem,4.2vw,3.4rem);">12+ </h2>
-          <p class="section-description">Years delivering MCS-accredited quality</p>
-        </div>
-      </div>
-
-      <!-- Trust line -->
-      <p style="margin-top:16px; max-width:900px;">
-        We’re <strong>MCS certified</strong>, <strong>RECC</strong> members and <strong>TrustMark</strong> approved.
-        All domestic and commercial installs meet UK regulations for safety, performance and consumer protection.
-      </p>
-    </div>
-  </section>
 
   <!-- ===== Story Section ===== -->
-  <section class="about-story" style="padding: clamp(48px,7vw,96px) 0; background:#fffdf5;">
-    <div class="container">
-      <div class="row align-items-center" style="display:grid; grid-template-columns: 1.1fr .9fr; gap:28px;">
-        <figure class="self-figure" style="margin:0;">
-          <img src="solar-panel-installation-solar-store-uk-home-3.jpg" alt="Solar panels in North Wales countryside" class="self-image">
-        </figure>
+<section class="about-story" style="padding: clamp(48px,7vw,96px) 0; background:#fffdf5;">
+  <div class="container">
+    <div class="about-split">
+      <figure class="media self-figure">
+        <img src="solar-panel-for-home-installation-solar-store-menai-bridge-north-wales.jpg"
+             alt="Solar panels in North Wales countryside" class="self-image">
+      </figure>
 
-        <div>
-          <span class="self-badge">Our Story</span>
-          <h2 class="about-title" style="font-size: clamp(1.9rem,3.2vw,2.6rem); margin: 6px 0 10px;">
-            Born in Anglesey — powering homes & businesses UK-wide
-          </h2>
+      <div class="content">
+        <span class="self-badge">Our Story</span>
+        <h2 class="about-title" style="font-size: clamp(1.9rem,3.2vw,2.6rem); margin: 6px 0 10px;">
+          Born in Anglesey, powering homes &amp; businesses UK-wide
+        </h2>
           <p class="about-text">
             Solar Store (trading name of North Wales Renewables) started in <strong>Menai Bridge</strong> with a clear mission:
             deliver clean energy that <strong>pays back</strong>. From small cottages to warehouses and farm buildings,
@@ -162,7 +136,7 @@
             cut grid dependence.
           </p>
           <p class="about-text">
-            We combine tier-one modules, smart hybrid inverters and dependable batteries — installed by qualified teams,
+            We combine tier-one modules, smart hybrid inverters and dependable batteries, installed by qualified teams,
             commissioned to <strong>MCS</strong> standards and supported by responsive aftercare.
           </p>
         </div>
@@ -170,44 +144,129 @@
     </div>
   </section>
 
+
+  <!-- Divider (lightning) -->
+  <div class="lightning-between" aria-hidden="true">
+    <i class="bi bi-lightning-charge-fill"></i>
+  </div>
+
+
   <!-- ===== Values / What We Do ===== -->
-  <section class="about-values" style="padding: clamp(48px,7vw,96px) 0; background:#fff;">
-    <div class="container">
-      <div class="row align-items-center" style="display:grid; grid-template-columns: .9fr 1.1fr; gap:28px;">
-        <div>
-          <span class="self-badge">Our Values</span>
-          <h2 class="about-title" style="font-size: clamp(1.9rem,3.2vw,2.6rem); margin: 6px 0 10px;">
-            Guided by quality, safety & real savings
-          </h2>
-          <ul class="cert-bullets" style="margin-top:10px;">
-            <li><i class="bi bi-patch-check-fill"></i><strong>Eco-First Design:</strong> high-yield arrays, neat cabling, discreet runs.</li>
-            <li><i class="bi bi-patch-check-fill"></i><strong>Customer Focus:</strong> site surveys, shading analysis, ROI modelling.</li>
-            <li><i class="bi bi-patch-check-fill"></i><strong>Innovation:</strong> hybrid inverters, smart tariffs, whole-home backup.</li>
-            <li><i class="bi bi-patch-check-fill"></i><strong>Compliance:</strong> MCS, DNO applications, NICEIC standards.</li>
-          </ul>
+<section class="about-values" style="padding: clamp(48px,7vw,96px) 0; background:#fff;">
+  <div class="container">
+    <div class="about-split">
+      <!-- Put the image in .media so it can appear first on mobile -->
+      <figure class="media self-figure">
+        <img src="solar-panel-installation-solar-store-menaibridge-north-wales-10.jpg"
+             alt="Battery storage and solar installation in Anglesey" class="self-image">
+      </figure>
 
+      <div class="content">
+        <span class="self-badge">Our Values</span>
+        <h2 class="about-title" style="font-size: clamp(1.9rem,3.2vw,2.6rem); margin: 6px 0 10px;">
+          Guided by quality, safety & real savings
+        </h2>
+
+        <ul class="cert-bullets" style="margin-top:10px;">
+          <li><i class="bi bi-patch-check-fill"></i><strong>Eco-First Design:</strong> high-yield arrays, neat cabling, discreet runs.</li>
+          <li><i class="bi bi-patch-check-fill"></i><strong>Customer Focus:</strong> site surveys, shading analysis, ROI modelling.</li>
+          <li><i class="bi bi-patch-check-fill"></i><strong>Innovation:</strong> hybrid inverters, smart tariffs, whole-home backup.</li>
+          <li><i class="bi bi-patch-check-fill"></i><strong>Compliance:</strong> MCS, DNO applications, NICEIC standards.</li>
+        </ul>
+        
           <h3 style="margin: 18px 0 6px; font-weight:800;">Services</h3>
-          <p>
-            <a href="/services/domestic-solar">Domestic Solar PV</a> •
-            <a href="/services/commercial-solar">Commercial Solar</a> •
-            <a href="/services/battery-storage">Battery Storage</a> •
-            <a href="/services/ev-charging">EV Charging</a> •
-            <a href="/services/maintenance">Maintenance & Monitoring</a> •
-            <a href="/services/off-grid">Off-Grid</a> •
-            <a href="/services/upgrades">System Upgrades</a> •
-            <a href="/services/repairs">Repairs & Diagnostics</a>
-          </p>
+<div class="services-tags">
+  <a href="/services/solar-domestic" class="tag-link">Solar Panels for Homes</a>
+  <a href="/services/solar-commercial" class="tag-link">Commercial Solar Systems</a>
+  <a href="/services/battery-storage" class="tag-link">Battery Storage & Add-Ons</a>
+  <a href="/services/ev-charging" class="tag-link">EV Charging</a>
+  <a href="/services/maintenance" class="tag-link">Off-Grid Solar Systems</a>
+</div>
 
-          <h3 style="margin: 18px 0 6px; font-weight:800;">Areas We Cover</h3>
-          <p>
-            <strong>Menai Bridge (LL59)</strong>, Anglesey & North Wales hubs (Bangor, Caernarfon, Holyhead), wider
-            <strong>Wales</strong> and <strong>England</strong> — delivering <strong>UK-wide</strong> projects on request.
-          </p>
+
+          <h3 style="margin:18px 0 6px; font-weight:800;">Areas We Cover</h3>
+
+<div class="areas-accordion">
+  <!-- Menai Bridge + nearby (primary focus) -->
+  <details class="areas-group" open>
+    <summary><span>Menai Bridge & Nearby</span></summary>
+    <div class="areas-tags">
+      <a class="tag-link">Menai Bridge (LL59)</a>
+      <a class="tag-link">Anglesey</a>
+      <a class="tag-link">Bangor</a>
+      <a class="tag-link">Caernarfon</a>
+      <a class="tag-link">Holyhead</a>
+      <a class="tag-link">Llangefni</a>
+      <a class="tag-link">Llandudno</a>
+      <a class="tag-link">Conwy</a>
+      <a class="tag-link">Colwyn Bay</a>
+      <a class="tag-link">Rhyl</a>
+      <a class="tag-link">Prestatyn</a>
+      <a class="tag-link">Wrexham</a>
+      <a class="tag-link">Chester</a>
+      <a class="tag-link">Liverpool</a>
+    </div>
+  </details>
+
+  <!-- Wales -->
+  <details class="areas-group">
+    <summary><span>Wales</span></summary>
+    <div class="areas-tags">
+      <a class="tag-link">North Wales</a>
+      <a class="tag-link">Mid Wales</a>
+      <a class="tag-link">South Wales</a>
+      <a class="tag-link">Cardiff</a>
+      <a class="tag-link">Swansea</a>
+      <a class="tag-link">Newport</a>
+    </div>
+  </details>
+
+  <!-- England -->
+<details class="areas-group">
+  <summary><span>England</span></summary>
+  <div class="areas-tags">
+    <!-- North West -->
+    <a class="tag-link">Liverpool</a>
+    <a class="tag-link">Manchester</a>
+    <a class="tag-link">Cheshire</a>
+    <a class="tag-link">Lancashire</a>
+
+    <!-- Midlands -->
+    <a class="tag-link">Birmingham</a>
+    <a class="tag-link">Wolverhampton</a>
+    <a class="tag-link">Leicester</a>
+    <a class="tag-link">Nottingham</a>
+
+    <!-- South -->
+    <a class="tag-link">Bristol</a>
+    <a class="tag-link">Oxford</a>
+    <a class="tag-link">Cambridge</a>
+    <a  class="tag-link">Reading</a>
+
+    <!-- London -->
+    <a class="tag-link">London</a>
+    <a class="tag-link">Greater London</a>
+    <a class="tag-link">Surrey</a>
+    <a class="tag-link">Kent</a>
+  </div>
+</details>
+
+
+  <!-- UK-wide -->
+  <details class="areas-group">
+    <summary><span>UK-Wide Projects</span></summary>
+    <div class="areas-tags">
+      <a class="tag-link">Wales</a>
+      <a class="tag-link">England</a>
+      <a class="tag-link">Scotland</a>
+      <a class="tag-link">Northern Ireland</a>
+    </div>
+  </details>
+</div>
+
         </div>
 
-        <figure class="self-figure" style="margin:0;">
-          <img src="solar-store-panel-batteries-installation-menai-bridge-wales-uk-4.jpg" alt="Battery storage and solar installation in Anglesey" class="self-image">
-        </figure>
+
       </div>
     </div>
   </section>
@@ -224,98 +283,118 @@
       <p class="section-description" style="margin-bottom:18px;">
         Get a fast, competitive quote from our Menai Bridge team. We’ll design for your roof, usage and budget.
       </p>
-      <a class="btn btn--primary" href="/contact">
+      <a class="btn btn--primary" href="contact.html">
         Start Your Solar Journey
         <i class="bi bi-arrow-right-short"></i>
       </a>
     </div>
   </section>
 
-  <!-- ===== Global Footer (uses existing styles.css) ===== -->
-  <footer class="site-footer" style="background:#fff;">
-    <div class="container" style="padding: clamp(32px,5vw,56px) 0;">
-      <div class="row" style="display:grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap:28px; align-items:start;">
-        <!-- Brand + SEO blurb -->
-        <div>
-          <a class="brand" href="/" style="gap:.5rem; margin-bottom:.5rem; display:inline-flex;">
-            <img src="solar-store-UK-logo-medium.jpg" alt="Solar Store logo" class="logo" style="height:40px;">
-            <span class="brand-name">Solar Store</span>
-          </a>
-          <p style="max-width:420px; margin-top:.35rem;">
-            Solar Store is the trading name of <strong>North Wales Renewables</strong> — MCS-certified solar panel & battery storage
-            installers based in <strong>Menai Bridge, Anglesey</strong>, serving <strong>North Wales</strong>, <strong>Wales & England</strong>, UK-wide.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="footer-head">Quick Links</h4>
-          <ul class="footer-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about" aria-current="page">About</a></li>
-            <li><a href="/gallery">Project Gallery</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <h4 class="footer-head">Services</h4>
-          <ul class="footer-list">
-            <li><a href="/services/domestic-solar">Solar Panels – Home</a></li>
-            <li><a href="/services/commercial-solar">Solar Panels – Commercial</a></li>
-            <li><a href="/services/battery-storage">Battery Storage</a></li>
-            <li><a href="/services/ev-charging">EV Charging</a></li>
-            <li><a href="/services/maintenance">Maintenance & Monitoring</a></li>
-            <li><a href="/services/off-grid">Off-Grid Solar</a></li>
-            <li><a href="/services/upgrades">System Upgrades</a></li>
-            <li><a href="/services/repairs">Repairs & Diagnostics</a></li>
-          </ul>
-        </div>
-
-        <!-- Policies + Social -->
-        <div>
-          <h4 class="footer-head">Policies</h4>
-          <ul class="footer-list">
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/cookie-policy">Cookie Policy</a></li>
-          </ul>
-
-          <h4 class="footer-head" style="margin-top:14px;">Social Media</h4>
-          <div class="social-row" style="display:flex; gap:10px;">
-            <a href="https://www.facebook.com/TheSolarStoreUK/" aria-label="Facebook" class="social-icon"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/solar_store_uk" aria-label="Instagram" class="social-icon"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/solarstoreukltd" aria-label="LinkedIn" class="social-icon"><i class="bi bi-linkedin"></i></a>
-            <a href="https://x.com/SolarStoreUK" aria-label="X (Twitter)" class="social-icon"><i class="bi bi-twitter-x"></i></a>
-          </div>
-        </div>
+  <!-- ====== FOOTER ====== -->
+<footer class="site-footer" id="footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <!-- Brand + SEO blurb (LEFT) -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <img src="/solar-store-UK-logo-medium.jpg" alt="Solar Store — MCS-certified solar panel & battery storage installers in North Wales" loading="lazy">
+        </a>
+        <p class="footer-blurb">
+          <strong>Solar Store</strong> designs, supplies and installs
+          <strong>solar panels</strong> and <strong>battery storage</strong> for
+          homes and businesses. MCS-certified installers based in
+          <strong>Menai Bridge, Anglesey</strong> serving
+          <strong>North Wales</strong>, <strong>Wales &amp; England</strong>.
+        </p>
       </div>
 
-      <hr style="margin: 24px 0; border:0; border-top:1px solid rgba(0,0,0,.08);" />
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="about-solar-store-menai-bridge.html">About</a></li>
+          <li><a href="solar-panel-and-batteries-services-installation-gallery-menai-bridge.html">Project Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
 
-      <div class="footer-legal" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;">
-        <p style="margin:0;">
-          <strong>MCS – NAP 20367</strong> • Registered under <strong>8389985</strong> • VAT No: <strong>161310162</strong>
-        </p>
-        <p style="margin:0;">
-          © <span id="y"></span> Solar Store. All rights reserved. Website design by
-          <a href="https://cleandesignuk.com" rel="noopener">Clean Design UK</a>.
-        </p>
+      <!-- Services -->
+      <div class="footer-col">
+        <h4 class="footer-title">Services</h4>
+        <ul class="footer-list">
+          <li><a href="/services/solar-domestic">Solar Panels for Homes</a></li>
+          <li><a href="/services/solar-commercial">Solar Panels for Commercial</a></li>
+          <li><a href="/services/battery-storage">Solar Battery Storage & Add-Ons</a></li>
+          <li><a href="/services/ev-charging">EV Charging</a></li>
+          <li><a href="/services/maintenance">Off-Grid Solar Systems</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Policies + Social -->
+      <div class="footer-col">
+        <h4 class="footer-title">Policies</h4>
+        <ul class="footer-list">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/cookie-policy">Cookie Policy</a></li>
+        </ul>
+
+        <h4 class="footer-title mt-16">Social Media</h4>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.facebook.com/TheSolarStoreUK/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="social-btn" href="https://www.instagram.com/solar_store_uk" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="social-btn" href="https://www.linkedin.com/company/solarstoreukltd" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a class="social-btn" href="https://x.com/SolarStoreUK" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <!-- ===== Small JS: mobile menu + year ===== -->
+    <hr class="footer-rule" />
+
+    <div class="footer-legal">
+      <p>Solar Store is the trading name of North Wales Renewables.</p>
+      <p>MCS – NAP 20367 &nbsp;•&nbsp; Registered under 8389985 &nbsp;•&nbsp; VAT No: 161310162</p>
+      <p class="footer-copy">
+        © 2025 Solar Store. All rights reserved. Website design by
+        <a href="https://cleandesignuk.com" target="_blank" rel="noopener">Clean Design UK</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const body = document.body;
+
+  hamburger.addEventListener('click', () => {
+    body.classList.toggle('nav-open');
+    const isOpen = body.classList.contains('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Mobile: toggle Services submenu
+  document.querySelectorAll('.has-sub > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        link.parentElement.classList.toggle('open');
+      }
+    });
+  });
+</script>
+
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const body = document.body;
-    if (hamburger) {
-      hamburger.addEventListener('click', () => {
-        body.classList.toggle('nav-open');
-        hamburger.setAttribute('aria-expanded', body.classList.contains('nav-open'));
+    // optional: smooth-scroll to form if header CTA pressed
+    document.querySelectorAll('a[href="#enquiry"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        document.querySelector('#enquiry').scrollIntoView({behavior:'smooth', block:'start'});
       });
-    }
-    document.getElementById('y').textContent = new Date().getFullYear();
+    });
   </script>
+
+
+
 </body>
 </html>

@@ -72,51 +72,240 @@
   margin-bottom: 12px;
 }
 
-/* Why Choose Us */
-.about-why {
-  padding: 70px 0;
-}
-.about-why h2 {
+/* ===== Why Choose Us (clean) ===== */
+.about-why { padding: clamp(56px, 6vw, 92px) 0; background: #fff; }
+
+.why-container { max-width: 1080px; } /* tighter so it doesn’t look sparse */
+
+.why-title{
   text-align: center;
-  margin-bottom: 40px;
+  font-family: "Quicksand", ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  margin: 0 0 28px;
+  color: #1a1a1a;
 }
-.why-grid {
+
+/* Grid on desktop/tablet */
+.why-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
-}
-.why-card {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 18px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-}
-.why-card i {
-  color: var(--yellow);
-  font-size: 1.4rem;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 22px;
 }
 
-/* CTA Section */
-.about-cta {
+/* Card */
+.why-card{
+  display: grid;
+  place-items: center;
   text-align: center;
-  padding: 80px 0;
-  background: #fffce6;
-}
-.about-cta h2 {
-  margin-bottom: 12px;
-  font-size: 2.4rem;
-}
-.about-cta p {
-  margin-bottom: 24px;
+
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.04);
+
+  padding: 16px;
+  gap: 10px;
+
+  /* 5:4 avoids “huge square” feel */
+  aspect-ratio: 5 / 4;
+  min-height: 140px;
+
+  transition: transform .08s ease, box-shadow .18s ease, border-color .18s ease;
+  will-change: transform;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .about-grid {
-    grid-template-columns: 1fr;
+@media (hover:hover){
+  .why-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0,0,0,.08);
+    border-color: rgba(0,0,0,.12);
   }
+}
+
+/* Icon badge */
+.why-icon{
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(254,218,62,.16);
+}
+.why-icon i{
+  font-size: 22px;
+  color: var(--yellow);
+  line-height: 1;
+}
+
+/* Text */
+.why-text{
+  font-weight: 800;
+  font-size: .98rem;
+  line-height: 1.35;
+  color: #1a1a1a;
+}
+
+/* Mobile: use swiper */
+.why-swiper{ display: none; padding-bottom: 24px; text-align: center; }
+.why-swiper .why-card{ aspect-ratio: 5 / 4; min-height: 140px; }
+
+/* Dots centered with air above */
+.why-pagination{
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+.why-pagination .swiper-pagination-bullet{
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(0,0,0,.22); opacity: 1; transition: background .2s ease;
+}
+.why-pagination .swiper-pagination-bullet-active{ background: var(--yellow); }
+
+/* Switch at 768 */
+@media (max-width: 768px){
+  .why-grid{ display: none; }
+  .why-swiper{ display: block; }
+}
+
+/* Make About page images rounded and clean */
+.self-figure {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.self-image {
+  width: 100%;
+  display: block;
+  border-radius: 16px; /* ensure the image itself also follows the rounding */
+  object-fit: cover;
+}
+
+/* Remove border from images on About page */
+.self-figure {
+  border: none !important;
+  box-shadow: none !important;  /* optional – if you also want to remove shadow */
+}
+
+/* Services tag buttons */
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag-link {
+  background: var(--yellow);
+  color: #111;
+  font-weight: 700;
+  font-size: .95rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.08);
+  transition: background .2s ease, transform .1s ease;
+}
+
+.tag-link:hover {
+  background: #ffd700;
+  transform: translateY(-2px);
+}
+
+/* ===== Areas accordion (dropdown groups) ===== */
+.areas-accordion { display: grid; gap: 12px; margin-top: 6px; }
+
+/* Group header (summary) */
+.areas-group summary {
+  list-style: none;          /* remove native marker */
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: #fff;
+  font-weight: 800;
+  display: flex; align-items: center; gap: 10px;
+}
+
+/* Add a chevron */
+.areas-group summary::after{
+  content: "▾";
+  margin-left: auto;
+  transition: transform .18s ease;
+}
+.areas-group[open] summary::after{ transform: rotate(180deg); }
+
+/* Inside area tags reuse your yellow tag style */
+.areas-tags{
+  display: flex; flex-wrap: wrap; gap: 10px;
+  padding: 12px 2px 4px 2px;
+}
+.tag-link{
+  background: var(--yellow);
+  color: #111;
+  font-weight: 700;
+  font-size: .95rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.08);
+  transition: background .2s ease, transform .1s ease;
+}
+.tag-link:hover{ background:#ffd700; transform: translateY(-2px); }
+
+/* Split layout that collapses neatly on small screens */
+.about-split{
+  display: grid;
+  grid-template-columns: 1fr;          /* mobile: one column */
+  gap: 22px;
+  align-items: center;
+}
+
+/* Order: image first, then text on small screens */
+.about-split .media   { order: 0; }
+.about-split .content { order: 1; }
+
+/* On larger screens switch to two columns */
+@media (min-width: 992px){
+  .about-split{
+    grid-template-columns: 1.1fr .9fr; /* tweak as you like */
+    gap: 28px;
+  }
+}
+
+/* Kill Bootstrap gutters if any .row slipped in */
+.about-story .row,
+.about-values .row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  --bs-gutter-x: 0;
+}
+
+/* Clean rounded images with no border */
+.self-figure{
+  border-radius: 18px;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: none !important;
+}
+.self-image{
+  display: block;
+  width: 100%;
+  height: auto;            /* keep natural aspect on mobile */
+  border-radius: 18px;
+  object-fit: cover;       /* safe if a fixed aspect is added later */
+}
+
+/* default: mobile = image first, text after */
+.about-values .about-split .media   { order: 0; }
+.about-values .about-split .content { order: 1; }
+
+/* desktop: put text first, image right */
+@media (min-width: 992px){
+  .about-values .about-split .content { order: 0; }
+  .about-values .about-split .media   { order: 1; }
 }

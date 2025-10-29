@@ -1,0 +1,111 @@
+/* Page: Project Gallery
+   Uses global variables from styles.css (e.g., --yellow, fonts) */
+
+/* Hero */
+.proj-hero{
+  background:#fffaf1; /* soft off-white */
+  padding:clamp(110px, 16vh, 180px) 0 56px;
+  margin-top:64px; /* offset fixed header */
+  text-align:center;
+}
+.proj-hero .pill{
+  display:inline-block;
+  padding:.5rem .95rem;
+  border:1px solid rgba(0,0,0,.12);
+  border-radius:999px;
+  font-weight:700;
+  letter-spacing:.02em;
+  background:#fff;
+}
+.proj-hero h1{
+  font-family:"Quicksand", ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size:clamp(2.2rem, 6vw, 4.5rem);
+  line-height:1.02;
+  margin:14px 0 10px;
+}
+.proj-hero .sub{
+  max-width:900px;
+  margin:0 auto;
+  color:#333;
+  font-size:1.05rem;
+}
+
+/* Gallery */
+.proj-gallery{ padding:30px 0 80px; background:#fff; }
+
+.masonry{
+  column-count:3;
+  column-gap:18px;
+}
+@media (max-width:1100px){ .masonry{ column-count:2; } }
+@media (max-width:640px){ .masonry{ column-count:1; } }
+
+.card{
+  display:inline-block;
+  width:100%;
+  margin:0 0 18px;
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,.06);
+  background:#fff;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+.card img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.card.tall img{ aspect-ratio:4/5; object-fit:cover; }
+
+/* Invisible full-cover button to trigger lightbox */
+.card .open{
+  position:absolute;
+  inset:0;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+}
+
+/* Pagination */
+.pager{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:24px 0 0;
+  flex-wrap:wrap;
+}
+.pager-btn,
+.pager-num{
+  appearance:none;
+  border:1px solid rgba(0,0,0,.12);
+  background:#fff;
+  padding:.55rem .9rem;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+}
+.pager-btn[disabled]{ opacity:.5; cursor:not-allowed; }
+.pager-num.is-active,
+.pager-num:hover{
+  background:var(--yellow);
+  border-color:var(--yellow);
+}
+
+/* CTA below gallery */
+.more-cta{ text-align:center; margin-top:22px; }
+
+/* Lightbox dialog (no caption) */
+#lightbox{
+  width:min(1000px, 92vw);
+  border:0; border-radius:16px; padding:0;
+  box-shadow:0 24px 60px rgba(0,0,0,.35);
+}
+#lightbox::backdrop{ background:rgba(0,0,0,.55); }
+#lightbox img{ width:100%; height:auto; display:block; }
+#lightbox .close{
+  position:absolute; top:8px; right:10px;
+  width:38px; height:38px; display:grid; place-items:center;
+  border:1px solid rgba(0,0,0,.12); border-radius:10px; background:#fff; cursor:pointer;
+}
