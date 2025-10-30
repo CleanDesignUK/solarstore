@@ -611,3 +611,32 @@
 .cta.cta--block{
   width: 100%; justify-content: center;
 }
+
+.ds-addons {
+  padding-top: 5px;
+  padding-bottom: 120px;
+}
+
+.ds-addon-box {
+  text-align: left;
+}
+
+.ds-addon-box h2 {
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+.addon-icon {
+  font-size: 52px;
+  color: #53c704; /* Solar Store green */
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* adjust responsive alignment */
+@media (max-width: 768px) {
+  .ds-addon-box {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}

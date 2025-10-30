@@ -1,0 +1,103 @@
+/* ======================================================
+   COOKIE BANNER
+   ====================================================== */
+.cookie-banner{
+  position:fixed;
+  bottom:1rem; left:50%;
+  transform:translateX(-50%);
+  z-index:1050; /* above nav & modals */
+  max-width:420px;
+  width:90vw;
+  background:#feda3e;
+  border-radius:0.75rem;
+  box-shadow:0 8px 28px rgba(0,0,0,.15);
+  padding:1.25rem 1.5rem;
+  font-size:.95rem;
+}
+
+.cookie-banner .cookie-text{
+  margin:0;
+  color:#0c0c0d;
+}
+
+.cookie-banner .cookie-link{
+  text-decoration:underline;
+  color: #0c0c0d;
+}
+
+.cookie-banner .btn{
+  font-size:.875rem;
+  background-color: #09096A;
+}
+
+
+/* Utility: hide element but keep for a11y */
+.visually-hidden{
+  display:none !important;
+}
+
+/* Small screens – full width */
+@media (max-width:576px){
+  .cookie-banner{
+    left:0; right:0;
+    transform:none;
+    width:100%;
+    border-radius:0;
+  }
+}
+/* ─────────────────────────────────────
+   Cookie-banner buttons – colour tweak
+   ──────────────────────────────────── */
+
+/* Accept  ▸ soft cream  #fffcec */
+#cookie-accept {
+  background-color: #0c0c0d;
+  color: #feda3e;           /* navy text keeps contrast AA-level */
+  border-color: #0c0c0d;    /* optional: matches background */
+}
+
+/* Decline ▸ pure white */
+#cookie-decline {
+  background-color: #ffffff;
+  color: #0c0c0d;
+  border-color: #ffffff;    /* outline remains subtle */
+}
+
+/* Optional: keep hover focus state consistent */
+#cookie-accept:hover,
+#cookie-accept:focus {
+  background-color: #fae278; /* 4 % darker */
+  color: #0c0c0d;
+}
+
+#cookie-decline:hover,
+#cookie-decline:focus {
+  background-color: #f7f7f7; /* light‐grey tint */
+}
+
+/* Ensure button text is perfectly centered */
+.cookie-actions .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Cookie buttons independent of global .btn pill */
+.cookie-btn{
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700;
+  padding:12px 16px;
+  line-height:1;
+  border-radius:10px;                 /* <- square-ish, not pill */
+  border:1px solid transparent;
+}
+
+/* Brand colours */
+.cookie-accept{
+  background:#000; color:#feda3e; border-color:#000;
+}
+.cookie-decline{
+  background:#fff; color:#000; border-color:transparent;
+}

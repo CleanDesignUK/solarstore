@@ -1122,4 +1122,39 @@ section {
   padding-bottom: 80px;
 }
 
+/* --- Legal page hero (re-uses your style language) --- */
+.legal-hero{
+  padding: 120px 0 64px;                 /* clears the fixed header */
+  text-align: center;
+  background: linear-gradient(to bottom, #fffce6, #fff);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.legal-hero .eyebrow{
+  display:inline-block;
+  font-weight:800;
+  letter-spacing:.02em;
+  background:#fff6bf;
+  color:#111;
+  padding:6px 10px;
+  border-radius:999px;
+}
+.legal-hero h1{
+  font-family:"Quicksand",sans-serif;
+  font-weight:800;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin:10px 0 8px;
+}
+.legal-hero .lead{
+  max-width: 860px;
+  margin: 0 auto;
+  color:#333;
+  line-height:1.6;
+}
 
+/* Body copy wrapper */
+.legal-body{
+  padding: clamp(36px, 5vw, 64px) 0;
+}
+.legal-body .narrow{ max-width: 860px; margin-inline:auto; }
+.legal-body h2{ margin-top: 18px; font-weight: 800; }
+.legal-body p, .legal-body li{ color:#222; }
