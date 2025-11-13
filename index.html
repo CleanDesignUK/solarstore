@@ -160,10 +160,10 @@
   <header class="site-header">
     <div class="container header-row">
       <!-- Brand -->
-      <a class="brand" href="index.html">
-        <img src="solar-store-UK-logo-medium.jpg" alt="Solar Store" class="logo">
-        <span class="brand-name">Solar Store</span>
-      </a>
+      <a class="brand" href="index.html" aria-label="Solar Store home">
+  <img src="solar-store-UK-logo-medium.jpg" alt="" class="logo">
+  <span class="brand-name">Solar Store</span>
+</a>
 
       <!-- Burger -->
       <button class="hamburger" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">
@@ -233,7 +233,8 @@
 
   <input type="email" id="email" name="email" placeholder="Your email*" required />
 
-  <select name="service" required>
+  <label for="service" class="sr-only">Select a service</label>
+<select id="service" name="service" required>
     <option value="" disabled selected>Select a service*</option>
     <option>Solar Panels - Homes</option>
     <option>Commercial Solar Systems</option>
@@ -452,12 +453,20 @@
           and energy independence. Trusted by <strong>50+ customers</strong> and backed 
           by quality workmanship and expert service.
         </p>
-        <a href="about-solar-store-menai-bridge.html" class="btn btn--primary">Learn More</a>
+        <a href="about-solar-store-menai-bridge.html" class="btn btn--primary">Learn more about Solar Store</a>
       </div>
 
       <!-- Right Image -->
       <div class="col-lg-6 text-center">
-        <img src="solar-store-panel-batteries-installation-menai-bridge-wales-uk-2.jpg" alt="Solar Store Installation Team" class="about-img">
+        <img 
+  src="solar-store-panel-batteries-installation-menai-bridge-wales-uk-2.jpg" 
+  alt="Solar Store Installation Team" 
+  class="about-img"
+  width="700"
+  height="700"
+  loading="lazy"
+/>
+
       </div>
 
     </div>
@@ -543,7 +552,7 @@
               <div class="avatar">AK</div>
               <div>
                 <h3 class="name">Andy &amp; Katie Clarke</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -562,7 +571,7 @@
               <div class="avatar">T</div>
               <div>
                 <h3 class="name">Taylor</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -581,7 +590,7 @@
               <div class="avatar">BH</div>
               <div>
                 <h3 class="name">Ben Horrigan</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -600,7 +609,7 @@
               <div class="avatar">K</div>
               <div>
                 <h3 class="name">Karen</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -619,7 +628,7 @@
               <div class="avatar">NS</div>
               <div>
                 <h3 class="name">Nicola Sleapwood</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -638,7 +647,7 @@
               <div class="avatar">DA</div>
               <div>
                 <h3 class="name">David Atkins</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -657,7 +666,7 @@
               <div class="avatar">B</div>
               <div>
                 <h3 class="name">Bryn</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -676,7 +685,7 @@
               <div class="avatar">AB</div>
               <div>
                 <h3 class="name">Anthony Bewley</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -695,7 +704,7 @@
               <div class="avatar">PW</div>
               <div>
                 <h3 class="name">Paul Walsh</h3>
-                <div class="stars" aria-label="5 out of 5">
+                <div class="stars" aria-hidden="true">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
@@ -867,7 +876,7 @@
 
       <!-- Quick Links -->
       <div class="footer-col">
-        <h4 class="footer-title">Quick Links</h4>
+        <h3 class="footer-title">Quick Links</h3>
         <ul class="footer-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="about-solar-store-menai-bridge.html">About</a></li>
@@ -878,7 +887,7 @@
 
       <!-- Services -->
       <div class="footer-col">
-        <h4 class="footer-title">Services</h4>
+        <h3 class="footer-title">Services</h3>
         <ul class="footer-list">
           <li><a href="domestic-solar-panels-menai-bridge.html">Solar Panels for Homes</a></li>
           <li><a href="commercial-solar-panels-menai-bridge.html">Solar Panels for Commercial</a></li>
@@ -891,13 +900,13 @@
 
       <!-- Policies + Social -->
       <div class="footer-col">
-        <h4 class="footer-title">Policies</h4>
+        <h3 class="footer-title">Policies</h3>
         <ul class="footer-list">
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
           <li><a href="cookie-policy.html">Cookie Policy</a></li>
         </ul>
 
-        <h4 class="footer-title mt-16">Social Media</h4>
+        <h3 class="footer-title mt-16">Social Media</h3>
         <div class="footer-social">
           <a class="social-btn" href="https://www.facebook.com/TheSolarStoreUK/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           <a class="social-btn" href="https://www.instagram.com/solar_store_uk" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
