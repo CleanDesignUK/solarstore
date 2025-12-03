@@ -235,9 +235,15 @@
 
 <!-- HERO FORM -->
 <form id="enquiry" class="hero-form" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="d35f7e46-7d1c-4a96-90a0-21b4a66df17f" />
+  <input type="hidden" name="access_key" value="ba5e4396-3cbc-4356-b37d-4add49f63153" />
   <input type="hidden" name="subject" value="New Website Enquiry" />
   <input type="hidden" name="from_name" value="Solar Store Website" />
+  
+        <!-- Name -->
+        <input type="text" id="full_name" name="name" placeholder="Your full name*" required />
+
+        <!-- Phone -->
+        <input type="tel" id="phone" name="phone" placeholder="Phone number*" required />
 
   <input type="email" id="email" name="email" placeholder="Your email*" required />
 
@@ -250,6 +256,10 @@
     <option>EV Charging</option>
     <option>Off-Grid Solar Systems</option>
   </select>
+
+   <!-- Address -->
+        <input type="text" id="address" name="address" placeholder="Address (postcode is helpful)*" required />
+
 
 <button type="submit" class="cta cta--lg hero-quote">
   <span>Get Quote</span>

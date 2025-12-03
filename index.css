@@ -5,7 +5,7 @@
 .hero-form{
   margin-top: 18px;
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: repeat(2, 1fr);
   gap: .6rem;
   width: min(760px, 100%);
   background: var(--glass-bg);
@@ -15,20 +15,52 @@
   backdrop-filter: blur(6px);
   box-shadow: 0 16px 40px rgba(0,0,0,.12);
 }
-.hero-form input[type="email"],
+
+
+.hero-form input,
 .hero-form select{
-  appearance:none;
-  -webkit-appearance:none;
+  appearance: none;
+  -webkit-appearance: none;
   font: inherit;
   padding: .85rem .9rem;
   border-radius: 12px;
   border: 1px solid rgba(0,0,0,.12);
   background: #fff;
 }
+
 .hero-form button.btn{
   padding: .9rem 1.2rem;
   border-radius: 12px;
 }
+
+/* Make service + address split row 2 */
+.hero-form select#service{
+  grid-column: span 2;
+}
+
+.hero-form input#address{
+  grid-column: span 1;
+}
+
+.hero-form button{
+  grid-column: span 1;
+  justify-self: stretch; /* make button full width */
+}
+
+.hero-form input#email{
+  grid-column: span 1;
+}
+
+.hero-form select#service{
+  grid-column: span 1; 
+}
+.hero-form button{
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  text-align: center;
+}
+
 
 /* Stack nicely on mobile */
 @media (max-width: 720px){
